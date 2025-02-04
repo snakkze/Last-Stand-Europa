@@ -1,0 +1,208 @@
+﻿capital = 500
+
+
+#oob = "BRA_1936"
+every_core_state = {
+	ROOT = {
+		add_to_array = { cores_at_game_start = PREV }
+	}
+}
+IF = {
+	limit = { has_dlc = "By Blood Alone" }
+#		set_air_oob = "BRA_1936_air_bba"
+	ELSE = {
+#		set_air_oob = "BRA_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+}
+###############################################################################
+# ToA
+###############################################################################
+IF = {
+	limit = {
+		has_dlc = "Trial of Allegiance"
+	}
+
+
+
+
+	every_owned_state = {
+		limit = {
+			OR = {
+				has_state_category = wasteland
+				has_state_category = pastoral
+				has_state_category = rural
+				#TODO_JUNO: Check states below are correct after map changes implemented
+				state = 498
+				state = 499
+			}
+			NOT = {
+				state = 961
+				state = 962
+				state = 963
+				state = 964
+				state = 965
+				state = 966
+				state = 967
+				state = 968
+				state = 496
+			}
+		}
+
+		# Neglected State Modifier
+
+	}
+
+	every_owned_state = {
+		limit = {
+			OR = {
+				state = 498
+				state = 499
+				state = 935
+				state = 936
+				state = 937
+			}
+		}
+	}
+
+	JUNO_set_shared_military_branch_defaults = yes
+
+	# Undiversified Economy Modifier
+
+	# Estado Novo Modifier
+	# Estado Moderno Modifier
+
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1934.7.17"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+	set_popularities = {
+		democratic = 50
+		neutrality = 25
+		fascism = 15
+		communism = 10
+	}
+
+	set_party_name = {
+		ideology = neutrality
+		name = BRA_military_party
+		long_name = BRA_military_party_long
+	}
+
+	set_party_name = {
+		ideology = democratic
+		name = BRA_provisional_government
+		long_name = BRA_provisional_government_long
+	}
+
+	country_event = {
+		id = JUNO_brazil_events.153
+		days = 30
+		random_days = 15
+	}
+	#Political
+	#Army
+	#Navy
+	#Cangaco
+
+}
+IF = {
+	limit = {
+		NOT = {
+			has_dlc = "Trial of Allegiance"
+		}
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1934.7.17"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 50
+		neutrality = 25
+		fascism = 15
+		communism = 10
+	}
+}
+###############################################################################
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1	
+}
+
+IF = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
+IF = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+IF = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns"}
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+#	set_naval_oob = "BRA_1936_naval_legacy"
+}
+IF = {
+	limit = { has_dlc = "Man the Guns"}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+#	set_naval_oob = "BRA_1936_naval"	
+}
+
+#recruit_character = BRA_armando_sales
+#recruit_character = BRA_aristides_guilhem
+#recruit_character = BRA_joao_neves_da_fontoura
+
+
+set_convoys = 40
+
+
+IF = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+}
+
+# 1939 Start #

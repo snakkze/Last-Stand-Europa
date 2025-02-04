@@ -1,0 +1,298 @@
+
+guiTypes = {
+
+	containerWindowType = {
+		name = "lse_parties_politics_tab"
+		position = {x=345 y=305}
+		size = { width=200 height= 65 }
+		verticalScrollbar = "right_vertical_slider"
+		margin = { top = 1 bottom = 0 }
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window_transparent"
+		}
+
+		gridBoxType = {
+			name = "lse_parties_list_grid"
+			position = { x = 0 y = 0 }
+			size = { width = 175 height = 260 }
+			slotsize = { width = 200 height = 14 }
+			format = "UPPER_LEFT"
+		}
+
+		### Democratic / Center ###
+		# Conservatives
+		# Social democrats
+		# Populists
+		# Liberalists
+		# Greens
+
+		### Left Wing ###
+		# Left Wing
+		# Left wing radicals
+		# Communists
+		# anarchos
+
+		### Right Wing ###
+		# Right WIng
+		# Far Right Wing
+		# Nazis
+		# More Nazis / AUthoritarians
+
+		### Others / Non Aligned ###
+		# Independence Party
+		# Satirical Party
+		# Smaller parties from top like smaller liberals
+		# Represents of autonomous regions
+
+		instantTextboxType = {
+			name = "moderate1"
+			position = { x = 0 y = 0 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			text = "[lse_party_name_1_scripted_loc]"
+			format = left
+			pdx_tooltip = "[lse_party_name_1_long_scripted_loc]"
+		}
+		instantTextboxType = {
+			name = "moderate1_%"
+			position = { x = -30 y = 0 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			text = "[?THIS.moderate1]%"
+			format = right
+			pdx_tooltip = "[?THIS.moderate1]%"
+		}
+
+		instantTextboxType = {
+			name = "moderate2"
+			position = { x = 0 y = 20 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[lse_party_name_2_scripted_loc]"
+			format = left
+			maxHeight = 20
+		}
+		instantTextboxType = {
+			name = "moderate2_%"
+			position = { x = -30 y = 20 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			text = "[?THIS.moderate2]%"
+			format = right
+		}
+
+		instantTextboxType = {
+			name = "moderate3"
+			position = { x = 0 y = 40 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[lse_party_name_3_scripted_loc]"
+			format = left
+			maxHeight = 20
+		}
+		instantTextboxType = {
+			name = "moderate3_%"
+			position = { x = -30 y = 40 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			text = "[?THIS.moderate3]%"
+			format = right
+		}
+
+		instantTextboxType = {
+			name = "moderate4"
+			position = { x = 0 y = 60 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[lse_party_name_4_scripted_loc]"
+			format = left
+			maxHeight = 20
+		}
+		instantTextboxType = {
+			name = "moderate4_%"
+			position = { x = -30 y = 60 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			text = "[?THIS.moderate4]%"
+			format = right
+		}
+
+		instantTextboxType = {
+			name = "moderate5"
+			position = { x = 0 y = 80 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[lse_party_name_5_scripted_loc]"
+			format = left
+			maxHeight = 20
+		}
+		instantTextboxType = {
+			name = "moderate5_%"
+			position = { x = -30 y = 80 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			text = "[?THIS.moderate5]%"
+			format = right
+		}
+
+		### LEFT WING ###
+		instantTextboxType = {
+			name = "left1"
+			position = { x = 0 y = 100 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			text = "[lse_party_name_6_scripted_loc]"
+			format = left
+			maxHeight = 20
+		}
+		instantTextboxType = {
+			name = "left1_%"
+			position = { x = -30 y = 100 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			text = "[?THIS.left1]%"
+			format = right
+		}
+
+		instantTextboxType = {
+			name = "left2"
+			position = { x = 0 y = 120 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[lse_party_name_7_scripted_loc]"
+			format = left
+			maxHeight = 20
+		}
+		instantTextboxType = {
+			name = "left2_%"
+			position = { x = -30 y = 120 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			text = "[?THIS.left2]%"
+			format = right
+		}
+
+		### RIGHT WING ###
+		instantTextboxType = {
+			name = "right1"
+			position = { x = 0 y = 140 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[lse_party_name_8_scripted_loc]"
+			format = left
+			maxHeight = 20
+		}
+		instantTextboxType = {
+			name = "right1_%"
+			position = { x = -30 y = 140 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			text = "[?THIS.right1]%"
+			format = right
+		}
+
+		instantTextboxType = {
+			name = "right2"
+			position = { x = 0 y = 160 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[lse_party_name_9_scripted_loc]"
+			format = left
+			maxHeight = 20
+		}
+		instantTextboxType = {
+			name = "right2_%"
+			position = { x = -30 y = 160 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			text = "[?THIS.right2]%"
+			format = right
+		}
+
+		### INDEPENDENT / NON ALIGNED ###
+		instantTextboxType = {
+			name = "independent1"
+			position = { x = 0 y = 180 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[lse_party_name_10_scripted_loc]"
+			format = left
+			maxHeight = 20
+		}
+		instantTextboxType = {
+			name = "independent1_%"
+			position = { x = -30 y = 180 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			text = "[?THIS.independent1]%"
+			format = right
+		}
+
+		instantTextboxType = {
+			name = "independent2"
+			position = { x = 0 y = 200 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[lse_party_name_11_scripted_loc]"
+			format = left
+			maxHeight = 20
+		}
+		instantTextboxType = {
+			name = "independent2_%"
+			position = { x = -30 y = 200 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			text = "[?THIS.independent2]%"
+			format = right
+		}
+
+		instantTextboxType = {
+			name = "independent3"
+			position = { x = 0 y = 220 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[lse_party_name_12_scripted_loc]"
+			format = left
+			maxHeight = 20
+		}
+		instantTextboxType = {
+			name = "independent3_%"
+			position = { x = -30 y = 220 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			text = "[?THIS.independent3]%"
+			format = right
+		}
+
+		instantTextboxType = {
+			name = "independent4"
+			position = { x = 0 y = 240 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[lse_party_name_13_scripted_loc]"
+			format = left
+			maxHeight = 20
+		}
+		instantTextboxType = {
+			name = "independent4_%"
+			position = { x = -30 y = 240 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			text = "[?THIS.independent4]%"
+			format = right
+		}
+	}
+}

@@ -1,0 +1,12 @@
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_idea_european_union"
+		texturefile = "gfx/interface/ideas/european_union.dds"
+	}
+
+	# GER
+	SpriteType = {
+		name = "GFX_idea_ger_recessions"
+		texturefile = "gfx/interface/ideas/GER/GER_recessions.dds"
+	}
+}

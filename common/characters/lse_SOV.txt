@@ -1,0 +1,17 @@
+characters = {
+
+    SOV_vladimir_putin = {
+		name = SOV_vladimir_putin
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SOV_vladimir_putin
+			}
+		}
+		country_leader = {
+			ideology = fascism_putinism_subtype
+			traits = { dictator pro_brics special_military_operation one_china_policy }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

@@ -1,0 +1,50 @@
+spriteTypes = {
+	# GER
+	spriteType = {
+		name = "GFX_portrait_GER_christian_lindner"
+		texturefile = "gfx/leaders/GER/christian_lindner.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_friedrich_merz"
+		texturefile = "gfx/leaders/GER/friedrich_merz.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_gregor_gysi"
+		texturefile = "gfx/leaders/GER/gregor_gysi.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_olaf_scholz"
+		texturefile = "gfx/leaders/GER/olaf_scholz.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_GER_robert_habeck"
+		texturefile = "gfx/leaders/GER/robert_habeck.png"
+	}
+
+	# CHI
+	spriteType = {
+		name = "GFX_portrait_CHI_xi_jingping"
+		texturefile = "gfx/leaders/CHI/xi_jingping.png"
+	}
+
+	# SOV
+	spriteType = {
+		name = "GFX_portrait_SOV_vladimir_putin"
+		texturefile = "gfx/leaders/SOV/vladimir_putin.png"
+	}
+	
+	# USA
+	spriteType = {
+		name = "GFX_portrait_USA_donald_trump"
+		texturefile = "gfx/leaders/USA/donald_trump.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_USA_elon_musk"
+		texturefile = "gfx/leaders/USA/elon_musk.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_USA_joe_biden"
+		texturefile = "gfx/leaders/USA/joe_biden.png"
+	}
+	
+}

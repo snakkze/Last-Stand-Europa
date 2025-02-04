@@ -1,0 +1,26 @@
+state={
+	id=991
+	name="STATE_991"
+	
+	
+	state_category = town
+
+	history={
+        owner = BOS
+		victory_points = {
+			11574 5 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+        add_core_of = BOS
+	}
+
+	provinces={
+		11574 
+	}
+	manpower=83541
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

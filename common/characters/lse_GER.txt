@@ -1,0 +1,78 @@
+characters = {
+
+    GER_olaf_scholz = {
+		name = GER_olaf_scholz
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_olaf_scholz
+			}
+		}
+		country_leader = {
+			ideology = socialist_social_democracy_1_subtype
+			traits = { dislikes_germany dislikes_russia likes_nato pro_migration }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+    GER_friedrich_merz = {
+		name = GER_friedrich_merz
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_friedrich_merz
+			}
+		}
+		country_leader = {
+			ideology = conservatism_christian_conservatism_1_subtype
+			traits = { dislikes_russia likes_nato dislikes_migration pro_integration }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+    GER_gregor_gysi = {
+		name = GER_gregor_gysi
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_gregor_gysi
+			}
+		}
+		country_leader = {
+			ideology = socialist_subtype
+			traits = { pro_migration pro_integration anti_war }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+    GER_robert_habeck = {
+		name = GER_robert_habeck
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_robert_habeck
+			}
+		}
+		country_leader = {
+			ideology = greenism_subtype
+			traits = { pro_migration dislikes_russia likes_nato financial_expert }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+    GER_christian_lindner = {
+		name = GER_christian_lindner
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_christian_lindner
+			}
+		}
+		country_leader = {
+			ideology = liberalism_classical_liberalism_1_subtype
+			traits = { bad_economist dislikes_russia likes_nato }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+}

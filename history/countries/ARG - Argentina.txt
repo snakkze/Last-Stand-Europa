@@ -1,0 +1,150 @@
+﻿capital = 278
+
+#oob = "ARG_1936"
+
+IF = {
+	limit = { has_dlc = "Man the Guns" }
+#		set_naval_oob = "ARG_1936_naval_mtg"
+	ELSE = {
+#		set_naval_oob = "ARG_1936_naval_legacy"
+	}
+}
+IF = {
+	limit = { has_dlc = "By Blood Alone" }
+#		set_air_oob = "ARG_1936_air_bba"
+		set_technology = {
+			iw_small_airframe = 1
+			aa_lmg = 1
+			engines_1 = 1
+			early_bombs = 1
+		}
+	ELSE = {
+#		set_air_oob = "ARG_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+}
+
+every_core_state = {
+	ROOT = {
+		add_to_array = { cores_at_game_start = PREV }
+	}
+}
+
+# Corruption Modifier
+
+# Crackdown on Corruption Modifier
+# Anti Corruption Modifier
+# Growing Nationalism Modifier
+
+IF = {
+	# TODO JA, set this to the correct dlc!
+	limit = { has_dlc = "Trial of Allegiance" }
+
+	# Army modifier
+	JUNO_set_shared_military_branch_defaults = yes
+
+
+
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+}
+
+IF = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+}
+IF = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+}
+
+IF = {
+	limit = {
+		NOT = {
+			has_dlc = "Trial of Allegiance" 
+		}
+	}
+
+	ELSE_IF = {
+		limit = {
+			has_dlc = "Trial of Allegiance" 
+		}
+		#recruit_character = ARG_ezequiel_pedro_paz
+	}
+}
+
+
+
+
+
+set_convoys = 120
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1931.11.8"
+	election_frequency = 72
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 25
+	fascism = 20
+	communism = 25
+	neutrality = 30
+}
+
+
+
+### VARIANTS ###
+# 1936 Start #
+IF = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+}
+IF = {
+	limit = { NOT = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+
+}
+IF = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	# Destroyers #
+	# Heavy Cruisers #
+	# Battleships #
+}
+
+# 1939 Start #

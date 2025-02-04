@@ -1,0 +1,92 @@
+﻿l_english:
+  conservatism_1:0 "Conservatism"
+  conservatism_1_noun:0 "Conservative"
+  conservatism_1_desc:0 "Conservative Regime"
+  democratic:0 "3. Conservatism"
+  democratic_noun:0 "Conservative"
+  democratic_desc:0 "Conservative Regime"
+
+  liberalism_1:0 "Liberalism"
+  liberalism_1_noun:0 "Liberal"
+  liberalism_1_desc:0 "Liberal Regime"
+  liberalism:0 "Liberalism"
+  liberalism_noun:0 "Liberal"
+  liberalism_desc:0 "Liberal Regime"
+  liberalism_2:0 "Liberalism"
+  liberalism_2_noun:0 "Liberal"
+  liberalism_2_desc:0 "Liberal Regime"
+
+  greenism:0 "Green"
+  greenism_noun:0 "Green"
+  greenism_desc:0 "Green Regime"
+
+  socialist_1:0 "Socialism"
+  socialist_1_noun:0 "Socialist"
+  socialist_1_desc:0 "Socialist Regime"
+  socialist:0 "Socialism"
+  socialist_noun:0 "Socialist"
+  socialist_desc:0 "Socialist Regime"
+
+  communist_1:0 "Communism"
+  communist_1_noun:0 "Communist"
+  communist_1_desc:0 "Communist Regime"
+  communism:0 "Communism"
+  communism_noun:0 "Communist"
+  communism_desc:0 "Communist Regime"
+
+  populist_1:0 "Populism"
+  populist_1_noun:0 "Populist"
+  populist_1_desc:0 "Populist Regime"
+  populism:0 "Populism"
+  populism_noun:0 "Populist"
+  populism_desc:0 "Populist Regime"
+
+  fascist_1:0 "Fascism"
+  fascist_1_noun:0 "Fascist"
+  fascist_1_desc:0 "Fascist Regime"
+  fascism:0 "Fascism"
+  fascism_noun:0 "Fascist"
+  fascism_desc:0 "Fascist Regime"
+
+  monarchism:0 "Monarchism"
+  monarchism_noun:0 "Monarchist"
+  monarchism_desc:0 "Monarchist Regime"
+
+
+  GER_conservatism_1_party: "CDU/CSU"
+  GER_conservatism_1_party_long: "Unionsparteien"
+  GER_democratic_party: "WU"
+  GER_democratic_party_long: "Werteunion"
+
+  GER_liberalism_1_party: "FDP"
+  GER_liberalism_1_party_long: "Freie Demokratische Partei"
+  GER_liberalism_party: "Volt"
+  GER_liberalism_party_long: "Volt Deutschland"
+
+  GER_greenism_party: "Grünen"
+  GER_greenism_party_long: "Bündnis 90/Die Grünen"
+
+  GER_socialist_1_party: "SPD"
+  GER_socialist_1_party_long: "Sozialdemokratische Partei Deutschlands"
+  GER_socialist_party:0 "Linke "
+  GER_socialist_party_long: "Die Linke"
+
+  GER_communist_1_party: "DKP"
+  GER_communist_1_party_long: "Deutsche Kommunistische Partei"
+  GER_communism_party: "MLPD"
+  GER_communism_party_long: "Marxistisch-Leninistische Partei Deutschlands"
+
+  GER_populist_1_party: "AfD"
+  GER_populist_1_party_long: "Alternative für Deutschland"
+  GER_populism_party: "BSW"
+  GER_populism_party_long: "Bündnis Sahra Wagenknecht"
+
+  GER_fascist_1_party: "Die Heimat"
+  GER_fascist_1_party_long: "Die Heimat"
+  GER_fascism_party: "III. Weg"
+  GER_fascism_party_long: "Der III. Weg"
+
+  GER_neutrality_party: "Die PARTEI"
+  GER_neutrality_party_long: "Die PARTEI"
+  GER_monarchism_party: "Partei Hohenzollern"
+  GER_monarchism_party_long: "Partei Hohenzollern"

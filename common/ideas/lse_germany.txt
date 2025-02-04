@@ -1,0 +1,93 @@
+ideas = {
+	country = {
+		# Mass Migration
+		lse_eu_european_union = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = european_union
+
+			# needs change when countries can leave eu
+			targeted_modifier = { tag = FRA trade_cost_for_target_factor = -1 extra_trade_to_target_factor = 0.25 }
+
+
+			modifier = {
+				stability_factor = 0.15
+			}
+		}
+
+		# Mass Migration
+		lse_ger_mass_migration = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ger_recessions
+
+			modifier = {
+				political_power_gain = -0.05
+				stability_weekly_factor = -0.1
+				populism_1_drift = 0.1
+				populism_1_acceptance = 35
+				monthly_population = 0.15
+			}
+		}
+
+		# Two years of recession
+		lse_ger_recession = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ger_recessions
+
+			modifier = {
+				stability_weekly_factor = -0.25
+				consumer_goods_factor = 0.2
+				populism_1_drift = 0.05
+				populism_1_acceptance = 15
+			}
+		}
+
+		# Run-Down Military
+		lse_ger_run_down_military = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ger_recessions
+
+			modifier = {
+				war_stability_factor = -0.25
+				war_support_factor = -0.35
+				army_attack_factor = -0.15
+				army_attack_speed_factor = -0.1
+			}
+		}
+	}
+}

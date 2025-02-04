@@ -1,0 +1,277 @@
+﻿capital = 43 # Budapest (Northern Hungary)
+
+IF = {
+	limit = {
+		has_dlc = "Gotterdammerung"
+	}
+#	set_oob = "HUN_wuw_1936"
+	ELSE_IF = {
+		limit = {
+			NOT = {
+				has_dlc = "Gotterdammerung"
+			}
+		}
+#		set_oob = "HUN_1936"
+	}
+}
+
+IF = {
+	limit = { has_dlc = "By Blood Alone" }
+#		set_air_oob = "HUN_1936_air_bba"
+		set_technology = {
+			iw_small_airframe = 1
+			engines_1 = 1
+			early_bombs = 1
+			photo_reconnaisance = 1
+			aa_lmg = 1
+		}
+	ELSE = {
+#		set_air_oob = "HUN_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			CAS1 = 1
+		}
+	}
+}
+
+IF = {
+	limit = { has_dlc = "Man the Guns" }
+		set_technology = {
+			mtg_transport = 1
+		}
+	ELSE = {
+		set_technology = {
+			transport = 1
+		}
+	}
+}
+
+### SETUP THE CORRECT POLITICAL PARTIES ###
+
+IF = {
+	limit = {
+		has_dlc = "Gotterdammerung"
+	}
+	set_party_name = {
+	    ideology = fascism
+	    long_name = HUN_national_socialist_party_long
+	    name = HUN_national_socialist_party
+	}
+}
+
+set_research_slots = 3
+
+### SETUP STABILITY AND WAR SUPPORT ###
+IF = {
+	limit = {
+		NOT = {
+			has_dlc = "Gotterdammerung"
+		}
+	}
+	set_stability = 0.7
+	set_war_support = 0.6
+	ELSE = {
+		set_stability = 0.3
+		set_war_support = 0.4
+	}
+}
+
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_trucks = 1
+	gw_artillery = 1
+
+	fuel_silos = 1
+	basic_train = 1
+}
+
+IF = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+IF = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
+
+### SETUP NATIONAL SPIRITS NO WW ###
+IF = {
+	limit = {
+		AND = {
+			has_dlc = "Death or Dishonor"
+			NOT = {
+				has_dlc = "Gotterdammerung"
+			}
+		}
+	}
+	IF = {
+		limit = { has_dlc = "Arms Against Tyranny" }
+	IF = {
+		limit = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+		}
+}
+
+### SETUP HUNGARO-GERMAN RELATIONS AND NATIONAL SPIRITS ###
+IF = {
+	limit = {
+		AND = {
+			has_dlc = "Death or Dishonor"
+			has_dlc = "Gotterdammerung"
+		}
+	}
+
+
+	### OPINION MODIFIERS ###
+
+	add_opinion_modifier = {
+		target = GER
+		modifier = HUN_GER_trade_modifier
+	}	
+	GER = {
+		add_opinion_modifier = {
+			target = HUN
+			modifier = HUN_GER_trade_modifier
+		}	
+	}
+
+	add_opinion_modifier = {
+		target = POL
+		modifier = HUN_POL_friendship_modifier
+	}	
+	POL = {
+		add_opinion_modifier = {
+			target = HUN
+			modifier = HUN_POL_friendship_modifier
+		}	
+	}
+
+	IF = {
+		limit = { has_dlc = "Arms Against Tyranny" }
+		give_market_access = GER
+	}
+
+	IF = {
+		limit = {
+			NOT = { has_dlc = "Arms Against Tyranny" }
+		}
+
+}
+
+# The Academy of Sciences Modifier
+### PLANE VARIANTS ###
+IF = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+}
+
+### TANK VARIANTS ###
+IF = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+
+	add_equipment_to_stockpile = {
+		type = light_tank_chassis_0
+		amount = 4
+		variant_name = "Straussler V-4"
+	}
+}
+
+### AH DYNAMIC MODIFIERS ###
+
+IF = {
+	limit = {
+		has_dlc = "Gotterdammerung"
+	}
+
+	# JOINT ECONOMY SPIRIT
+
+	# JOINT INDUSTRY SPIRIT
+
+	# JOINT ARMY SPIRIT
+
+	# JOINT HUSSAR SPIRIT
+
+}
+
+add_opinion_modifier = { 
+	target = CZE
+	modifier = BFTB_incongruous_neighbors
+}
+add_opinion_modifier = { 
+	target = ROM
+	modifier = BFTB_incongruous_neighbors
+}
+add_opinion_modifier = { 
+	target = YUG
+	modifier = BFTB_incongruous_neighbors
+}
+
+# SETUP HUNGARIAN POLITICS
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.3.31"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 25
+	fascism = 31
+	neutrality = 44
+}
+
+# RECRUITING HUNGARIAN CHARACTERS
+IF = {
+	limit = {
+		NOT = {
+			has_dlc = "Gotterdammerung"
+		}
+	}
+}
+IF = {
+	limit = {
+		has_dlc = "Gotterdammerung"
+	}
+}
+
+#Scientists always recruited
+
+
+# HIRES THE STARTING PM
+IF = {
+	limit = {
+		has_dlc = "Gotterdammerung"
+	}
+
+add_breakthrough_progress = {
+	specialization = specialization_land
+	value = 0.2 # Due to Straussler
+}
+
+add_breakthrough_progress = {
+	specialization = specialization_air
+	value = 0.2 # Due to Azboth Oskar
+}
+
+
+# SETUP THE 1939 SCENARIO
+
+
+
+

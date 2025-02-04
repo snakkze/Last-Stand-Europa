@@ -1,0 +1,247 @@
+defined_text = {
+    name = lse_party_name_1_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_moderate1_party
+    }
+}
+defined_text = {
+    name = lse_party_name_1_long_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_moderate1_party_long
+    }
+}
+
+defined_text = {
+    name = lse_party_name_2_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_moderate2_1_party
+    }
+}
+defined_text = {
+    name = lse_party_name_2_long_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_moderate2_party_long
+    }
+}
+
+defined_text = {
+    name = lse_party_name_3_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_moderate3_party
+    }
+}
+defined_text = {
+    name = lse_party_name_3_long_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_moderate3_party_long
+    }
+}
+
+defined_text = {
+    name = lse_party_name_4_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_moderate4_party
+    }
+}
+defined_text = {
+    name = lse_party_name_4_long_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_moderate4_party_long
+    }
+}
+
+defined_text = {
+    name = lse_party_name_5_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_moderate5_party
+    }
+}
+defined_text = {
+    name = lse_party_name_5_long_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_moderate5_party_long
+    }
+}
+
+defined_text = {
+    name = lse_party_name_6_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_left1_party
+    }
+}
+defined_text = {
+    name = lse_party_name_6_long_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_left1_party_long
+    }
+}
+
+defined_text = {
+    name = lse_party_name_7_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_left2_party
+    }
+}
+defined_text = {
+    name = lse_party_name_7_long_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_left2_party_long
+    }
+}
+
+defined_text = {
+    name = lse_party_name_8_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_right1_party
+    }
+}
+defined_text = {
+    name = lse_party_name_8_long_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_right1_party_long
+    }
+}
+
+defined_text = {
+    name = lse_party_name_9_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_right2_party
+    }
+}
+defined_text = {
+    name = lse_party_name_9_long_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_right2_party_long
+    }
+}
+
+defined_text = {
+    name = lse_party_name_10_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_independent1_party
+    }
+}
+defined_text = {
+    name = lse_party_name_10_long_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_independent1_party_long
+    }
+}
+
+defined_text = {
+    name = lse_party_name_11_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_independent2_party
+    }
+}
+defined_text = {
+    name = lse_party_name_11_long_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_independent2_party_long
+    }
+}
+
+defined_text = {
+    name = lse_party_name_12_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_independent3_party
+    }
+}
+defined_text = {
+    name = lse_party_name_12_long_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_independent3_party_long
+    }
+}
+
+defined_text = {
+    name = lse_party_name_13_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_independent4_party
+    }
+}
+defined_text = {
+    name = lse_party_name_13_long_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = GER_independent4_party_long
+    }
+}
+

@@ -1,0 +1,1463 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+### search_filters = {FOCUS_FILTER_ARMY_XP}
+### search_filters = {FOCUS_FILTER_NAVY_XP}
+### search_filters = {FOCUS_FILTER_AIR_XP}
+### search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+### search_filters = {FOCUS_FILTER_POLITICAL_CHARACTER}
+### search_filters = {FOCUS_FILTER_MILITARY_CHARACTER}
+### search_filters = {FOCUS_FILTER_INTERNATIONAL_TRADE}
+### search_filters = {FOCUS_FILTER_HISTORICAL}
+
+focus_tree = {
+	id = german_focus
+	
+	default = no
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+
+	continuous_focus_position = { x = 500 y = 1300 }
+	
+	focus = {
+		id = GER_failed_question_of_trust
+		icon = GFX_goal_unknown
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 6
+		y = 0
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# gets event "dissolution of the bundestag"
+		}
+	}
+	
+	focus = {
+		id = GER_election_campaigns_of_2025
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_failed_question_of_trust }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_failed_question_of_trust
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GER_the_migration_crisis
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_election_campaigns_of_2025 }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 18
+		y = 1
+		relative_position_id = GER_election_campaigns_of_2025
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# Anschlag von Aschaffenburg event
+		}
+	}
+	
+	focus = {
+		id = GER_adressing_the_bundeshaushalt
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_election_campaigns_of_2025 }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_election_campaigns_of_2025
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# 
+		}
+	}
+	
+	# Lindner type shit (fuck him)
+	focus = {
+		id = GER_fiscal_discipline
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_adressing_the_bundeshaushalt }
+		mutually_exclusive = {
+			focus = GER_debt_brake_revisions
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -4
+		y = 1
+		relative_position_id = GER_adressing_the_bundeshaushalt
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_balanced_budget_ultimatum
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_fiscal_discipline }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_fiscal_discipline
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# decisions like stop money for peru or shit iykyk
+		}
+	}
+
+	focus = {
+		id = GER_boost_defense_spending
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_fiscal_discipline }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -2
+		y = 1
+		relative_position_id = GER_fiscal_discipline
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_corporate_tax_reductions
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_fiscal_discipline }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 2
+		y = 1
+		relative_position_id = GER_fiscal_discipline
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GER_deregulate_labor_markets
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_corporate_tax_reductions }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_corporate_tax_reductions
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GER_privatize_healthcare
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_deregulate_labor_markets }
+		prerequisite = { focus = GER_balanced_budget_ultimatum }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_deregulate_labor_markets
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_debt_brake_revisions
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_adressing_the_bundeshaushalt }
+		mutually_exclusive = {
+			focus = GER_fiscal_discipline
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 4
+		y = 1
+		relative_position_id = GER_adressing_the_bundeshaushalt
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GER_expand_klimaschutzpaket
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_debt_brake_revisions }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 2
+		y = 1
+		relative_position_id = GER_debt_brake_revisions
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# grants +15% factory output to green tech for 180 days but increases debt-to-GDP ratio by 5%
+		}
+	}
+	focus = {
+		id = GER_green_energy_transition
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_expand_klimaschutzpaket }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_expand_klimaschutzpaket
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+		}
+	}
+	
+	focus = {
+		id = GER_raise_top_tax_brackets
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_debt_brake_revisions }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_debt_brake_revisions
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GER_social_welfare_expansion
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_debt_brake_revisions }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -2
+		y = 1
+		relative_position_id = GER_debt_brake_revisions
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GER_public_sector_wage_increase
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_social_welfare_expansion }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_social_welfare_expansion
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GER_strengthen_the_social_cohesion
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_public_sector_wage_increase }
+		prerequisite = { focus = GER_raise_top_tax_brackets }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_public_sector_wage_increase
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GER_international_policies
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_election_campaigns_of_2025 }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -20
+		y = 1
+		relative_position_id = GER_election_campaigns_of_2025
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# 
+		}
+	}
+	
+	focus = {
+		id = GER_us_situation
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_international_policies }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 8
+		y = 1
+		relative_position_id = GER_international_policies
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		available = {
+			# available when trump is president
+		}
+
+		completion_reward = {
+			# chancellor scholz calls trump and congratulates him
+		}
+	}
+	
+	focus = {
+		id = GER_scholz_in_washington
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_us_situation }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -3
+		y = 1
+		relative_position_id = GER_us_situation
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		available = {
+			
+		}
+
+		completion_reward = {
+			# to be continued when shit actually happens irl
+		}
+	}
+	
+	focus = {
+		id = GER_the_crazy_techbro
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_us_situation }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 3
+		y = 1
+		relative_position_id = GER_us_situation
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		available = {
+			
+		}
+
+		completion_reward = {
+			# afd support
+			# "Only the afd can save germany"
+		}
+	}
+	
+	focus = {
+		id = GER_the_nazi_salute
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_the_crazy_techbro }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -2
+		y = 1
+		relative_position_id = GER_the_crazy_techbro
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		available = {
+			
+		}
+
+		completion_reward = {
+			# public outrages aswell as demos gegen rechts with the rise of fascism and musk doing that
+		}
+	}
+	
+	focus = {
+		id = GER_ignore_the_salute
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_the_nazi_salute }
+		mutually_exclusive = {
+			focus = GER_arrest_warrant_against
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_the_nazi_salute
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		available = {
+			
+		}
+
+		completion_reward = {
+			# fascism tolerance rises, afd gains populartiy
+		}
+	}
+	
+	focus = {
+		id = GER_arrest_warrant_against
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_the_nazi_salute }
+		mutually_exclusive = {
+			focus = GER_ignore_the_salute
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -2
+		y = 1
+		relative_position_id = GER_the_nazi_salute
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		available = {
+			
+		}
+
+		completion_reward = {
+			# afd support
+		}
+	}
+	
+	focus = {
+		id = GER_seize_tesla_brandenburg
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_arrest_warrant_against }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_arrest_warrant_against
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		available = {
+			
+		}
+
+		completion_reward = {
+			# public outrage, trump calls not cool scholz
+		}
+	}
+	
+	focus = {
+		id = GER_musk_vs_the_eu
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_the_crazy_techbro }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_the_crazy_techbro
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		available = {
+			
+		}
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GER_musk_weidel_talk
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_the_crazy_techbro }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 2
+		y = 1
+		relative_position_id = GER_the_crazy_techbro
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		available = {
+			
+		}
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GER_musks_appearance_in_halle
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_musk_weidel_talk }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_musk_weidel_talk
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		available = {
+			
+		}
+
+		completion_reward = {
+			# afd support
+		}
+	}
+	
+	focus = {
+		id = GER_israel_palestine_conflict
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_international_policies }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_international_policies
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GER_search_for_a_resolution
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_israel_palestine_conflict }
+		mutually_exclusive = {
+			focus = GER_continue_israel_support
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 2
+		y = 1
+		relative_position_id = GER_israel_palestine_conflict
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# un antrag (wird weitergegeben an nächsten kanzler per mission)
+		}
+	}
+	
+	focus = {
+		id = GER_stop_weapon_exports
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_search_for_a_resolution }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_search_for_a_resolution
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# embargo israel
+		}
+	}
+	
+	focus = {
+		id = GER_humantary_help_in_gaza
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_search_for_a_resolution }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 2
+		y = 1
+		relative_position_id = GER_search_for_a_resolution
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# offmap civs from germany to palestine
+		}
+	}
+	
+	focus = {
+		id = GER_continue_israel_support
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_israel_palestine_conflict }
+		mutually_exclusive = {
+			focus = GER_search_for_a_resolution
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -2
+		y = 1
+		relative_position_id = GER_israel_palestine_conflict
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# improve relations with israel, lower with palestine
+		}
+	}
+	
+	focus = {
+		id = GER_investions_in_rheinmetall
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_continue_israel_support }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_continue_israel_support
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# more mils, more export to israel if codeable
+		}
+	}
+	
+	focus = {
+		id = GER_israel_german_weapon_deals
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_investions_in_rheinmetall }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_investions_in_rheinmetall
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# civs for germany in exchange for weapons to israel
+		}
+	}
+	
+	focus = {
+		id = GER_russo_ukrainian_situation
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_international_policies }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -5
+		y = 1
+		relative_position_id = GER_international_policies
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# unlocks decisions for more events like in the tree
+			# press for diplomatic actions (scholz)
+		}
+	}
+	
+	focus = {
+		id = GER_taurus_debatte
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_russo_ukrainian_situation }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -2
+		y = 1
+		relative_position_id = GER_russo_ukrainian_situation
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# debatte in the bundestag -> be scared or sacred unlock next focus per decision
+		}
+	}
+	
+	focus = {
+		id = GER_scared_approach
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_taurus_debatte }
+		mutually_exclusive = {
+			focus = GER_brave_approach
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_taurus_debatte
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# relations with ukraine worsen, stability higher war support lower
+		}
+	}
+	
+	focus = {
+		id = GER_continue_ukrainian_training_on_german_soil
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_scared_approach }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_scared_approach
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# relations with ukraine higher, stability lower war support lower
+			# CDU support gets higher
+		}
+	}
+	
+	focus = {
+		id = GER_brave_approach
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_taurus_debatte }
+		mutually_exclusive = {
+			focus = GER_scared_approach
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -2
+		y = 1
+		relative_position_id = GER_taurus_debatte
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# relations with ukraine higher, stability lower war support lower
+			# CDU support gets higher
+		}
+	}
+	
+	focus = {
+		id = GER_operation_euman
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_brave_approach }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_brave_approach
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# relations with ukraine higher, stability lower war support lower
+			# CDU support gets higher
+		}
+	}
+	
+	# CDU / AFD
+	focus = {
+		id = GER_the_populist_path
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_the_migration_crisis }
+		mutually_exclusive = {
+			focus = GER_restrained_approach
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 4
+		y = 1
+		relative_position_id = GER_the_migration_crisis
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_enough_is_enough
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_new_asylum_policies }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 2
+		y = 1
+		relative_position_id = GER_new_asylum_policies
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# friedrich merz asyl changes ankündigung
+		}
+	}
+
+	focus = {
+		id = GER_zero_tolerance_policy
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_the_populist_path }
+		mutually_exclusive = {
+			focus = GER_new_asylum_policies
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 3
+		y = 1
+		relative_position_id = GER_the_populist_path
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# 
+		}
+	}
+
+	focus = {
+		id = GER_call_for_militarized_borders
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_zero_tolerance_policy }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_zero_tolerance_policy
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# 
+		}
+	}
+
+	focus = {
+		id = GER_exit_the_eu_asylum_system
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_call_for_militarized_borders }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_call_for_militarized_borders
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			# afd chancellor
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# 
+		}
+	}
+
+	focus = {
+		id = GER_radicalize_the_people
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_zero_tolerance_policy }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 2
+		y = 1
+		relative_position_id = GER_zero_tolerance_policy
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# 
+		}
+	}
+
+	focus = {
+		id = GER_national_identity_campaign
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_radicalize_the_people }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_radicalize_the_people
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# decision for later afd chancellor to forgot the schandmal of the holocaust
+		}
+	}
+
+	focus = {
+		id = GER_promote_traditional_values
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_national_identity_campaign }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_national_identity_campaign
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_new_asylum_policies
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_the_populist_path }
+		mutually_exclusive = {
+			focus = GER_zero_tolerance_policy
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -3
+		y = 1
+		relative_position_id = GER_the_populist_path
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# friedrich merz asyl changes antrag
+		}
+	}
+
+	focus = {
+		id = GER_fall_of_the_brandmauer
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_law_and_order_campaigns }
+		prerequisite = { focus = GER_enough_is_enough }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_law_and_order_campaigns
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# unlocks schwarz-blaue koalition
+		}
+	}
+
+	focus = {
+		id = GER_law_and_order_campaigns
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_strengthen_border_secrurity }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_strengthen_border_secrurity
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# propagandize aschaffenburg and murder of cdu politician 28.01
+		}
+	}
+
+	focus = {
+		id = GER_strengthen_border_secrurity
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_new_asylum_policies }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_new_asylum_policies
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# merz bundestags rede
+		}
+	}
+	
+	# SPD / GREEN
+	focus = {
+		id = GER_restrained_approach
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_the_migration_crisis }
+		mutually_exclusive = {
+			focus = GER_the_populist_path
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -4
+		y = 1
+		relative_position_id = GER_the_migration_crisis
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GER_election_of_2025
+		icon = GFX_goal_unknown
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 6
+		y = 8
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		available = {
+			always = no
+		}
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GER_continuation_of_scholz
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_election_of_2025 }
+		mutually_exclusive = { focus = GER_weidel focus = GER_habeck focus = GER_merz }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 6
+		y = 1
+		relative_position_id = GER_election_of_2025
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GER_habeck
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_election_of_2025 }
+		mutually_exclusive = { focus = GER_continuation_of_scholz focus = GER_weidel focus = GER_merz }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = 2
+		y = 1
+		relative_position_id = GER_election_of_2025
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GER_merz
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_election_of_2025 }
+		mutually_exclusive = { focus = GER_continuation_of_scholz focus = GER_habeck focus = GER_weidel }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -2
+		y = 1
+		relative_position_id = GER_election_of_2025
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GER_weidel
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_election_of_2025 }
+		mutually_exclusive = { focus = GER_continuation_of_scholz focus = GER_habeck focus = GER_merz }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -6
+		y = 1
+		relative_position_id = GER_election_of_2025
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+}

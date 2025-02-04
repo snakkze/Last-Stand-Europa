@@ -1,0 +1,308 @@
+﻿capital = 111
+
+#set_oob = "FIN_1936"
+
+### VARS ###
+
+# FINNISH ARMY NS
+
+# FINNISH AIRFORCE NS
+#FINNISH NAVY NS
+
+### MOTTI SYSTEM
+
+### NATIONAL DEFENSE SYSTEM
+subtract_from_variable = { FIN_search_for_weapon_caches_decision_cost_for_trigger = 1 } 
+
+add_to_variable = { FIN_coastal_garrisons_pp_xp_cost_trigger = -1 }
+add_to_variable = { FIN_coastal_garrisons_cp_cost_trigger = -1 }
+add_to_variable = { FIN_mining_the_sea_pp_xp_cost_trigger = -1 }
+add_to_variable = { FIN_mining_the_sea_cp_cost_trigger = -1 }
+#FOREIGN POLITICS
+### BOP ###
+
+### FOCUS ###
+#FASCIST REGIME NS
+
+### MINERAL WEALTH DEVELOPMENT ###
+
+### ECONOMIC DECISIONS ###
+
+
+
+# 1936 BoP (1939 BoP set up below)
+if = {
+	limit = {
+		has_start_date < 1936.01.02
+	}
+	set_power_balance = {
+		id = FIN_power_balance
+		left_side = FIN_bad_side
+		right_side = FIN_good_side
+		set_value = -0.45 #Adding FIN_sisu_2 idea below
+	}
+	#SISU NS
+}
+
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+#		set_naval_oob = "FIN_1936_naval_mtg"
+	else = {
+#		set_naval_oob = "FIN_1936_naval_legacy"
+	}
+}
+
+set_research_slots = 3
+
+##################
+### CHARACTERS ###
+##################
+
+### COUNTRY LEADERS ###
+store_core_states_on_game_start = yes
+#Set Kokoomus as Non-Aligned party #TODO_Manu: I can now kill the old string and be done with this
+set_party_name = {
+	ideology = neutrality
+	name = FIN_neutrality_party_kokoomus
+	long_name = FIN_neutrality_party_kokoomus_long
+}
+
+
+
+if = {
+	limit = {
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+### ARMY LEADERS
+
+if = {
+	limit = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	#Fascists
+
+	#Communists
+}
+
+
+### NAVY LEADERS
+
+### THEORISTS ###
+if = {
+	limit = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	#Communist
+}
+
+###ARMY CHIEFS ###
+
+### NAVY CHIEFS ###
+
+### AIR CHIEFS ###
+
+### MILITARY HIGH COMMAND ###
+
+
+### POLITICAL ADVISORS ###
+
+if = {
+	limit = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	#Fascists
+
+	#Socialists
+}
+
+#Set up flags for Civil Wars
+if = {
+	limit = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	#From decisions targetting fascists
+	FIN_vilho_annala = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+	FIN_elias_simojoki = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+	FIN_vilho_helanen = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+	FIN_paavo_susitaival = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+	FIN_reino_ala_kulju = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+	FIN_erik_heinrichs = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+	FIN_lauri_malmberg = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+	FIN_hugo_osterman = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+	FIN_alpo_marttinen = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+
+	#Country Leaders
+	FIN_risto_ryti = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+	FIN_kyosti_kallio = {
+		set_character_flag = FIN_anti_fascist_character_flag
+	}
+	FIN_carl_mannerheim = {
+		set_character_flag = FIN_anti_communist_character_flag
+		set_character_flag = FIN_anti_fascist_character_flag
+	}
+
+
+	##Unit Leaders
+	FIN_aksel_airo = {
+		set_character_flag = FIN_anti_communist_character_flag
+		set_character_flag = FIN_anti_fascist_character_flag
+	}
+	
+	FIN_woldemar_hagglund = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+	FIN_aarne_juutilainen = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+	FIN_wiljo_einar_tuompo = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+	FIN_kurt_martti_wallenius = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+	FIN_fanni_luukkonen = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+	FIN_paavo_talvela = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+	FIN_lauri_torni = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+	FIN_juho_heiskanen = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+	FIN_karl_oesch = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+	GER_nikolaus_von_falkenhorst = {
+		set_character_flag = FIN_anti_communist_character_flag
+	}
+
+	
+	FIN_aarne_sihvo = {
+		set_character_flag = FIN_anti_fascist_character_flag
+	}
+	FIN_akseli_anttila = {
+		set_character_flag = FIN_anti_fascist_character_flag
+	}
+	FIN_emil_vaateri = {
+		set_character_flag = FIN_anti_fascist_character_flag
+	}
+	FIN_eyolf_mattsson = {
+		set_character_flag = FIN_anti_fascist_character_flag
+	}
+	FIN_toivo_antikainen = {
+		set_character_flag = FIN_anti_fascist_character_flag
+	}
+
+}
+
+
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	gw_artillery = 1			
+	interwar_antiair = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	basic_train = 1
+}
+if = {
+	limit = { NOT = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_heavy_cruiser = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		coastal_defense_ships = 1
+	}
+}
+
+set_convoys = 5
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1931.3.2" #Represents Presidential elections (Country leader is President of the Republic, not Prime Minister)
+	election_frequency = 72
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 15
+	fascism = 19
+	communism = 1
+	neutrality = 65
+}
+add_stability = -0.1
+
+#Event for Svinhufvud's Term Ending
+country_event = { id = AAT_finland_political.02 days = 426 }
+
+
+
+### VARIANTS ###
+# 1936 Start #
+if = {
+	limit = { NOT = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	# Heavy Cruisers #
+}
+
+### TANKS
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+
+	add_equipment_to_stockpile = { 
+		type = light_tank_chassis_0
+		variant_name = "FT mod. 31"
+		amount = 34
+		producer = FRA
+	}
+}
+
+
+
+

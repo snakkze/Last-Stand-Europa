@@ -1,0 +1,17 @@
+characters = {
+
+    CHI_xi_jingping = {
+		name = CHI_xi_jingping
+		portraits = {
+			civilian = {
+				large = GFX_portrait_CHI_xi_jingping
+			}
+		}
+		country_leader = {
+			ideology = communist_xi_jinping_thought_subtype
+			traits = { socialist_dictator likes_russia pro_brics one_china_policy }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

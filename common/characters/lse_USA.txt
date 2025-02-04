@@ -1,0 +1,48 @@
+characters = {
+
+    USA_joe_biden = {
+		name = USA_joe_biden
+		portraits = {
+			civilian = {
+				large = GFX_portrait_USA_joe_biden
+			}
+		}
+		country_leader = {
+			ideology = conservatism_liberal_conservatism_1_subtype
+			traits = { pro_migration pro_israel pro_taiwan likes_nato }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+    USA_donald_trump = {
+		name = USA_donald_trump
+		portraits = {
+			civilian = {
+				large = GFX_portrait_USA_donald_trump
+			}
+		}
+		country_leader = {
+			ideology = populist_trumpism_subtype
+			traits = { dislikes_migration pro_israel pro_taiwan loves_tariffs }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+    USA_elon_musk = {
+		name = USA_elon_musk
+		portraits = {
+			civilian = {
+				large = GFX_portrait_USA_elon_musk
+			}
+		}
+		country_leader = {
+			ideology = populist_technocracy_subtype
+			traits = { dislikes_migration pro_israel tech_bro }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+}

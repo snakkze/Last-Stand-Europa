@@ -1,0 +1,32 @@
+state={
+	id=986
+	name="STATE_986"
+	
+	state_category = city
+
+	history = {
+		victory_points = {
+			6626 3
+		}
+        owner = ITA
+        add_core_of = ITA
+        add_core_of = SLO
+		buildings = {
+			infrastructure = 1
+			dockyard = 1
+			arms_factory = 1
+			6626 = {
+				naval_base = 5
+			}
+
+		}
+
+	}
+
+	provinces={
+		6626 
+	}
+	manpower=199812
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

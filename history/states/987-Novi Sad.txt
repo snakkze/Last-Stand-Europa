@@ -1,0 +1,25 @@
+state={
+	id=987
+	name="STATE_987"
+	
+	state_category = large_town
+
+	history={
+        owner = SER
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+		}
+		victory_points = {
+			11581 3 
+		}
+        add_core_of = SER
+	}
+
+	provinces={
+		11580 13371
+	}
+	manpower=231798
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

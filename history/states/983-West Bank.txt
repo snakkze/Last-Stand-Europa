@@ -1,0 +1,26 @@
+state={
+	id=983
+	name="STATE_983"
+
+	history={
+		owner = PAL
+		buildings = {
+			infrastructure = 3 #was: 5
+			industrial_complex = 1
+			air_base = 2
+		}
+		victory_points = {
+			1086 1 
+		}
+		add_core_of = PAL
+		add_core_of = ISR
+	}
+
+	provinces={
+		1086 7107 
+	}
+	manpower=2949740
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

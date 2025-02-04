@@ -1,0 +1,221 @@
+leader_traits = {
+
+	socialist_dictator = {
+		random = no
+		political_power_factor = 0.25
+		weekly_casualties_war_support = 0.001
+		ai_desired_divisions_factor = 0.20
+		communism_drift = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	likes_nato = {
+		random = no
+		ai_strategy = {
+			type = alliance
+			id = "ENG"
+			value = 300
+		}
+
+		ai_strategy = {
+			type = alliance
+			id = "FRA"
+			value = 300
+		}
+
+		ai_strategy = {
+			type = alliance
+			id = "USA"
+			value = 300
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	pro_brics = {
+		random = no
+		ai_strategy = {
+			type = alliance
+			id = "CHI"
+			value = 300
+		}
+
+		ai_strategy = {
+			type = alliance
+			id = "SOV"
+			value = 300
+		}
+	}
+
+
+	special_military_operation = {
+		random = no
+		ai_strategy = {
+			type = antagonize
+			id = "UKR"
+			value = 200
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	one_china_policy = {
+		random = no
+		ai_strategy = {
+			type = antagonize
+			id = "CHI"
+			value = 200
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	loves_tariffs = {
+		random = no
+		trade_opinion_factor = -0.10
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	tech_bro = {
+		random = no
+		stability_factor = 0.3
+		political_power_factor = -0.3
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	pro_taiwan = {
+		random = no
+		ai_strategy = {
+			type = antagonize
+			id = "CHI"
+			value = 60
+		}
+		ai_strategy = {
+			type = contain
+			id = "CHI"
+			value = 60
+		}
+		ai_strategy = {
+			type = befriend
+			id = "CHI"
+			value = -60
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	pro_israel = {
+		random = no
+		ai_strategy = {
+			type = befriend
+			id = "ISR"
+			value = 100
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	anti_zionist = {
+		random = no
+		ai_strategy = {
+			type = contain
+			id = "ISR"
+			value = 60
+		}
+		ai_strategy = {
+			type = befriend
+			id = "ISR"
+			value = -60
+		}
+		ai_strategy = {
+			type = antagonize
+			id = "ISR"
+			value = 200
+		}
+		ai_strategy = {
+			type = conquer
+			id = "ISR"
+			value = 100
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	dislikes_russia = {
+		random = no
+		ai_strategy = {
+			type = antagonize
+			id = "SOV"
+			value = 200
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	likes_russia = {
+		random = no
+		ai_strategy = {
+			type = alliance
+			id = "SOV"
+			value = 300
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	bad_economist = {
+		sprite = 10
+		random = yes
+		production_factory_max_efficiency_factor = -0.05
+		consumer_goods_factor = 0.05
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+	anti_war = {
+		random = no
+		war_support_factor = -0.06
+		generate_wargoal_tension = 0.20
+		request_lease_tension = 0.5
+		lend_lease_tension =-0.5
+	}
+
+	pro_migration = {
+		random = no
+		stability_weekly = -0.05
+		political_power_gain = -0.1
+	}
+
+	pro_integration = {
+		random = no
+		stability_weekly = 0.05
+		political_power_gain = 0.1
+	}
+
+	dislikes_migration = {
+		random = no
+	}
+}

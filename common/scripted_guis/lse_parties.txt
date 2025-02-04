@@ -1,0 +1,8 @@
+scripted_gui = {
+
+	#lse_parties = {
+	#	context_type = player_context
+	#	parent_window_token = politics_tab
+	#	window_name = "lse_parties_politics_tab"
+	#}
+}

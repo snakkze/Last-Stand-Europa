@@ -1,0 +1,79 @@
+﻿capital = 302
+
+#oob = "BOL_1936"
+every_core_state = {
+	ROOT = {
+		add_to_array = { cores_at_game_start = PREV }
+	}
+}
+IF = {
+	limit = { has_dlc = "By Blood Alone" }
+#		set_air_oob = "BOL_1936_air_bba"
+	ELSE = {
+#		set_air_oob = "BOL_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+}
+
+IF = {
+	limit = {
+		has_dlc = "Trial of Allegiance"
+	}
+
+	add_timed_idea = {
+		idea = BOL_toll_of_the_chaco_war
+		days = 1400
+	}
+
+
+	JUNO_set_shared_military_branch_defaults = yes
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	tech_trucks = 1
+	fuel_silos = 1
+}
+
+IF = {
+	limit = {
+		has_dlc = "Trial of Allegiance"
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1934.11.11"
+		election_frequency = 72
+		elections_allowed = yes
+	}
+	set_popularities = {
+		neutrality = 32
+		democratic = 54
+		communism = 12
+		fascism = 2
+	}
+
+
+	ELSE = {
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "1934.11.11"
+			election_frequency = 72
+			elections_allowed = yes
+		}
+
+		set_popularities = {
+			neutrality = 100
+		}
+
+	}
+}
+
+
+
+

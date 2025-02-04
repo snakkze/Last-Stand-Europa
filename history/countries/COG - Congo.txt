@@ -1,0 +1,74 @@
+﻿capital = 295 # Leopoldville/Kinshaasa
+
+#set_oob = "COG_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_trucks = 1
+	basic_train = 1
+	armored_car1 = 1
+	gw_artillery = 1
+	interwar_antitank = 1
+	tech_engineers = 1
+}
+
+### Set Base Values ###
+set_war_support = 0.4 
+set_stability = 0.35
+
+### 1936 Modifiers Setup ###
+IF = {
+	limit = {
+		has_dlc = "Gotterdammerung"
+	}
+
+	# Set Flags
+
+	### Set National Spirits ###
+
+	### Set dynamic modifiers ###
+
+	# The Force Publique Modifier
+
+	# The Model Colony Modifier
+	# The Armée Nationale Congolaise Modifier
+
+}
+
+# Starting Convoys
+set_convoys = 5
+
+# Hiring Characters 
+IF = {
+	limit = {
+		has_dlc = "Gotterdammerung"
+	}
+
+	# Recruiting Characters
+
+	# Adding the Belgian Minister of Colonies as a locked advisor
+}
+
+# Setup 1936 politics 
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 80
+	democratic = 20
+}
+
+### The 1939 Scenario ###
+
+
+
+
+
+
+
+

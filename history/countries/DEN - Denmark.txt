@@ -1,0 +1,245 @@
+﻿capital = 37
+
+if = {
+	limit = { has_dlc = "Arms Against Tyranny" }
+}
+
+
+#oob = "DEN_1936"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+#		set_naval_oob = "DEN_1936_naval_mtg"
+	else = {
+#		set_naval_oob = "DEN_1936_naval_legacy"
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+#		set_air_oob = "DEN_1936_air_bba"
+	else = {
+#		set_air_oob = "DEN_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+
+		}
+	}
+}
+
+#### COUNTRY LEADERS ####
+if = {
+	limit = {
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+#### MILITARY LEADERS and ADVISORS ####
+if = {
+	limit = {
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+#### POLITICAL ADVISORS ####
+if = {
+	limit = {
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+
+
+set_research_slots = 3
+set_stability = 0.9
+set_war_support = 0.1
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+}
+
+#### AAT SET UP ####
+if = {
+	limit = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	set_stability = 0.5
+
+	set_power_balance = {
+		id = DEN_balance_of_power
+		set_default = no  # whether or not to reset the power balance to the initial value, default = no
+		set_value = -0.1
+	}
+
+	#PARY POPULARITY
+
+	#NEGLECTED MILITARY
+
+	#ECONOMIC CRISIS
+	#INDUSTRIAL CAPABILITIES
+
+	#WAR PREPARATIONS
+	#POLITICAL EDICTS
+	#OCCUPATION LAWS
+	#RESISTANCE
+	#HAEREN
+	#SOVAERNET
+	
+	#FLYVEVÅBNET
+	
+	#DECISION VARIABLES
+	#BoP
+
+
+
+	#Initializing Development Array
+	add_to_array = {
+	    array = DEN_original_core_states_array
+	    value = 101 #GREENLAND
+	    index = 0
+	}
+	#States to add to the Development Array
+	add_to_array = { DEN_original_core_states_array = 37 } #Sjaelland
+	add_to_array = { DEN_original_core_states_array = 911 } #Fyn
+	add_to_array = { DEN_original_core_states_array = 99 } #Norrejylland
+	add_to_array = { DEN_original_core_states_array = 912 } #Sonderjylland
+	add_to_array = { DEN_original_core_states_array = 910 } #Bornholm
+	add_to_array = { DEN_original_core_states_array = 337 } #Faroes
+	add_to_array = { DEN_original_core_states_array = 124 } #Gotland
+	add_to_array = { DEN_original_core_states_array = 100 } #Iceland
+	#Set up variable in each state
+	for_each_scope_loop = {
+	    array = DEN_original_core_states_array
+
+	#set_variable = { DEN_unruly_subject_modifier = -10 } #Modifying Opinions this way doesn't work yet
+}
+
+#### TECH SET UP
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_heavy_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+}
+
+
+
+
+if = {
+	limit = {
+		has_dlc = "Arms Against Tyranny"
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1935.10.22"
+		election_frequency = 42
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = DEN_democratic_popularity
+		fascism = DEN_fascism_popularity
+		communism = DEN_communism_popularity
+		neutrality = DEN_neutrality_popularity
+	}
+
+	store_core_states_on_game_start = yes
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Arms Against Tyranny" }
+	}
+	set_popularities = {
+		democratic = 94
+		fascism = 1
+		communism = 2
+		neutrality = 3
+	}
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1935.10.22"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+}
+
+
+
+set_convoys = 55
+
+### VARIANTS ###
+# 1936 Start #
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	# Heavy Cruisers #
+}
+
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 7
+}
+
+# 1939 Start #

@@ -1,0 +1,23 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_closebutton"
+		texturefile = "gfx//interface//closebutton.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	
+	spriteType = {
+		name = "GFX_closebutton_16"
+		texturefile = "gfx//interface//closebutton_16.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	spriteType = {
+		name = "GFX_closebutton_small"
+		texturefile = "gfx//interface//closebutton_small.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+}

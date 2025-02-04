@@ -1,0 +1,61 @@
+bitmapfonts = {
+    bitmapfont = {
+        name = "lse_16segoe_ui"
+        path = "gfx/fonts/segoe_ui/lse_16segoe_ui"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+
+    bitmapfont = {
+        name = "lse_16din_next"
+        path = "gfx/fonts/din_next/lse_16din_next"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+
+    bitmapfont = {
+        name = "lse_18din_next"
+        path = "gfx/fonts/din_next/lse_18din_next"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+
+    bitmapfont = {
+        name = "lse_20din_next"
+        path = "gfx/fonts/din_next/lse_20din_next"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+
+    bitmapfont = {
+        name = "lse_24segoe_ui"
+        path = "gfx/fonts/segoe_ui/lse_24segoe_ui"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+
+    bitmapfont = {
+        name = "lse_24din_next"
+        path = "gfx/fonts/din_next/lse_24din_next"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+}

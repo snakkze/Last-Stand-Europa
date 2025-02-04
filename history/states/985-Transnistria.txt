@@ -1,0 +1,26 @@
+state={
+	id=985
+	name="STATE_985"
+	
+	state_category = rural
+
+	history = {
+        owner = TNT
+		victory_points = {
+			13368 3 # Tiraspol
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			
+		}
+        add_core_of = TNT
+	}
+
+	provinces={
+		13366 13367 13368
+	}
+	manpower=347251
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
