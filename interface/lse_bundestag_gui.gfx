@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_bundestag_party_icon"
+		texturefile = "gfx/interface/bundestag/bundestag_parties.dds"
+		noOfFrames = 15
+	}
+	spriteType = {
+		name = "GFX_bundestag_empty_button"
+		texturefile = "gfx/interface/bundestag_empty_button.dds"
+	}
+}

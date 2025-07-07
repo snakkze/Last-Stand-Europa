@@ -1,5 +1,20 @@
 ﻿capital = 440
 
+lse_setup_nuclear_warheads = yes
+add_nuclear_bombs = 170
+
+# ICBM / Intercontinental Ballistic Missile
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 120
+}
+
+# FISSION / Cruise missiles, Nuclear Torpedos
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 50
+}
+
 #oob = "PAK_1936"
 
 # Starting tech

@@ -1,0 +1,37 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_mapicon_rocket_silo"
+		texturefile = "gfx/interface/mapicons/mapicon_rocket_silo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_window_header"
+		texturefile = "gfx/interface/rocket_silo/silo_window_header.dds"
+	}
+
+	spriteType = {
+		name = "GFX_textbox"
+		texturefile = "gfx/interface/rocket_silo/silo_selection.dds"
+	}
+
+	spriteType = {
+		name = "GFX_silo_deploy"
+		texturefile = "gfx/interface/rocket_silo/silo_deploy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_text_background"
+		texturefile = "gfx/interface/rocket_silo/silo_text_bg.dds"
+	}
+
+	progressbartype = {
+		name = "GFX_silo_progress_bar"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 0.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/rocket_silo/silo_progressbar.dds"
+		textureFile2 = "gfx/interface/rocket_silo/silo_progressbar_bg.dds"
+		steps = 259
+		size = { x = 259 y = 8 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+}

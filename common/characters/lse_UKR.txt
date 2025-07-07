@@ -1,0 +1,17 @@
+characters = {
+
+    UKR_volodymyr_zelenskyy = {
+		name = UKR_volodymyr_zelenskyy
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SOV_volodymyr_zelenskyy
+			}
+		}
+		country_leader = {
+			ideology = greenism_progressivism_subtype
+			traits = { likes_nato dislikes_russia }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

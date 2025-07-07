@@ -1,21 +1,6 @@
 ﻿capital = 100 #Iceland
 
-#set_oob = "ICE_1936"
-
-set_research_slots = 2
-
-IF = {
-	limit = {
-		has_dlc = "Arms Against Tyranny"
-	}
-	
-	set_war_support = 0.15
-}
-IF = {
-	limit = {
-		NOT = { has_dlc = "Arms Against Tyranny" }
-	}
-}
+add_ai_strategy = { type = alliance id = USA value = 200 }
 
 set_technology = {
 	infantry_weapons = 1

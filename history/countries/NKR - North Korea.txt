@@ -1,5 +1,20 @@
 ﻿capital = 527
 
+lse_setup_nuclear_warheads = yes
+add_nuclear_bombs = 50
+
+# ICBM / Intercontinental Ballistic Missile
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 20
+}
+
+# SRBM / Short Range Ballistic Missile
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 30
+}
+
 set_research_slots = 0
 
 set_technology = {

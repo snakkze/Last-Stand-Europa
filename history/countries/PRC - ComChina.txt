@@ -1,5 +1,32 @@
 ﻿capital = 608
 
+lse_setup_nuclear_warheads = yes
+add_nuclear_bombs = 500
+
+# ICBM / Intercontinental Ballistic Missile
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 200
+}
+
+# SLBM / Submarine Launched Ballistic Missile
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 48
+}
+
+# THERMONUCLEAR / Bombers
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 40
+}
+
+# FISSION / Cruise missiles, Nuclear Torpedos
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 150
+}
+
 #oob = "PRC_1936"
 
 # Starting tech

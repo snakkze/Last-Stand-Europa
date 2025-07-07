@@ -13375,3 +13375,17 @@
 13374;103;162;36;land;false;hills;1
 13375;101;129;193;land;false;plains;1
 13376;150;85;130;land;false;plains;1
+13377;25;5;25;land;false;forest;6
+13378;102;5;25;land;true;forest;6
+13379;124;5;25;land;false;forest;6
+13380;146;5;25;land;false;forest;6
+13381;167;5;25;land;true;forest;6
+13382;42;5;25;land;true;forest;6
+13383;67;5;25;land;false;forest;6
+13384;77;5;25;land;false;forest;6
+13385;99;5;25;land;true;forest;6
+13386;173;81;86;land;true;hills;1
+13387;172;81;86;land;false;hills;1
+13388;171;81;86;land;true;hills;1
+13389;89;81;86;land;true;hills;1
+13390;91;81;86;land;true;hills;1

@@ -1,7 +1,6 @@
 ﻿capital = 70
 
-
-
+add_ai_strategy = { type = alliance id = USA value = 200 }
 
 set_technology = {
 	tech_trucks = 1

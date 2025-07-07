@@ -1,5 +1,7 @@
 ﻿capital = 111
 
+add_ai_strategy = { type = alliance id = USA value = 200 }
+
 #set_oob = "FIN_1936"
 
 ### VARS ###

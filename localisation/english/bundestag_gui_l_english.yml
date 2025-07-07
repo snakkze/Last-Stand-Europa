@@ -1,0 +1,44 @@
+﻿l_english:
+
+ # Decisions
+  bundestag_gui_decision_category:0 "bundestag GUI Examples§!"
+
+ # Scripted GUIs
+  bundestag_main_icon_tt:0 "[GetBundestagSeatName] - [GetBundestagPartyName]"
+  bundestag_seat_name:0 "Seat [?temp_seat|Y0]"
+  bundestag_member_name:0 "[GetBundestagPartyName] - [?bundestag_seat_array^bundestag_member_index] Seats"
+
+  lse_party_1_name:0 "DKP"
+  lse_party_2_name:0 "MLPD"
+  lse_party_3_name:0 "BSW"
+  lse_party_4_name:0 "Die Linke"
+  lse_party_5_name:0 "SPD "
+  lse_party_6_name:0 "B’90/Grüne"
+  lse_party_7_name:0 "Volt"
+  lse_party_8_name:0 "FDP"
+  lse_party_9_name:0 "CDU/CSU"
+  lse_party_10_name:0 "Werteunion"
+  lse_party_11_name:0 "AfD"
+  lse_party_12_name:0 "Heimat"
+  lse_party_13_name:0 "III. Weg"
+  lse_party_14_name:0 "PH" # Not pornhub!
+  lse_party_15_name:0 "Others"
+
+  lse_party_1_color:0 "Red"
+  lse_party_2_color:0 "Red"
+  lse_party_3_color:0 "Purple"
+  lse_party_4_color:0 "Pink"
+  lse_party_5_color:0 "Red"
+  lse_party_6_color:0 "Green"
+  lse_party_7_color:0 "Violet"
+  lse_party_8_color:0 "Yellow"
+  lse_party_9_color:0 "Black"
+  lse_party_10_color:0 "Blue"
+  lse_party_11_color:0 "Blue"
+  lse_party_12_color:0 "Brown"
+  lse_party_13_color:0 "Green"
+  lse_party_14_color:0 "Blue"
+  lse_party_15_color:0 "Gray"
+
+  bundestag_coalition_tt:0 "[GetBundestagCoalitionTT]"
+  bundestag_coalition_delayed_tt:0 "Test\nTest2\n Test3 \n Test4"

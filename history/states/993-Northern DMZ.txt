@@ -1,0 +1,21 @@
+state={
+	id=993
+	name="STATE_993"
+	
+	
+	state_category = town
+
+	history={
+        owner = NKR
+        add_core_of = NKR
+
+		set_demilitarized_zone = yes
+	}
+
+	provinces={
+		13382 13383 13384 13385
+	}
+	manpower=112
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

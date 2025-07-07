@@ -1,0 +1,190 @@
+scripted_gui = {
+	rocket_silo_mapicon_gui = {
+		context_type = state_mapicon
+		window_name = "rocket_silo_mapicon_gui_container"
+
+		triggers = {
+			rocket_silo_mapicon_button_visible = {
+				is_owned_by = ROOT
+				rocket_silo > 0
+			}
+		}
+
+		effects = {
+			rocket_silo_mapicon_button_click = {
+				meta_effect = {
+					text = {  set_temp_variable = { result_state = [TARGET_STATE] } }
+					TARGET_STATE = "[?THIS.GetID]"
+				}
+				set_variable = { ROOT.silo_selected_state_id = result_state }
+				set_variable = { ROOT.silo_selected_state = THIS }
+
+				ROOT = {
+					open_rocket_silo_gui = yes
+				}
+			}
+		}
+	}
+
+	rocket_silo_gui = {
+		context_type = player_context
+		window_name = "rocket_silo_gui_container"
+
+		visible = {
+			ROOT = {
+				has_country_flag = rocket_silo_gui
+			}
+		}
+
+		effects = {
+			close_button_click = {
+				ROOT = {
+					clr_country_flag = rocket_silo_gui
+				}
+			}
+
+			add_srbm_button_click = {
+				var:ROOT.silo_selected_state_id = { set_temp_variable = { state_srbm = THIS.stored_srbm } }
+				set_temp_variable = { temp_selected_srbms = ROOT.selected_srbm_count }
+				add_to_temp_variable = { temp_selected_srbms = 1 }
+
+				if = {
+					limit = {
+						NOT = {
+							check_variable = { temp_selected_srbms > state_srbm }
+						}
+					}
+					add_to_variable = { ROOT.selected_srbm_count = 1 }
+				}
+			}
+
+			add_srbm_button_right_click = {
+				subtract_from_variable = { ROOT.selected_srbm_count = 1 }
+				clamp_variable = {
+					var = ROOT.selected_srbm_count 
+					min = 0
+				}
+			}
+
+			add_srbm_button_shift_click = {
+				set_variable = { ROOT.selected_srbm_count = 0 }
+			}
+
+			add_mrbm_button_click = {
+				var:ROOT.silo_selected_state_id = { set_temp_variable = { state_mrbm = THIS.stored_mrbm } }
+				set_temp_variable = { temp_selected_mrbms = ROOT.selected_mrbm_count }
+				add_to_temp_variable = { temp_selected_mrbms = 1 }
+
+				if = {
+					limit = {
+						NOT = {
+							check_variable = { temp_selected_mrbms > state_mrbm }
+						}
+					}
+					add_to_variable = { ROOT.selected_mrbm_count = 1 }
+				}
+			}
+
+			add_mrbm_button_right_click = {
+				subtract_from_variable = { ROOT.selected_mrbm_count = 1 }
+				clamp_variable = {
+					var = ROOT.selected_mrbm_count 
+					min = 0
+				}
+			}
+
+			add_mrbm_button_shift_click = {
+				set_variable = { ROOT.selected_mrbm_count = 0 }
+			}
+
+			add_icbm_button_click = {
+				var:ROOT.silo_selected_state_id = { set_temp_variable = { state_icbm = THIS.stored_icbm } }
+				set_temp_variable = { temp_selected_icbms = ROOT.selected_icbm_count }
+				add_to_temp_variable = { temp_selected_icbms = 1 }
+
+				if = {
+					limit = {
+						NOT = {
+							check_variable = { temp_selected_icbms > state_icbm }
+						}
+					}
+					add_to_variable = { ROOT.selected_icbm_count = 1 }
+				}
+			}
+
+			add_icbm_button_right_click = {
+				subtract_from_variable = { ROOT.selected_icbm_count = 1 }
+				clamp_variable = {
+					var = ROOT.selected_icbm_count 
+					min = 0
+				}
+			}
+
+			add_icbm_button_shift_click = {
+				set_variable = { ROOT.selected_icbm_count = 0 }
+			}
+
+			deploy_button_click = {
+				if = {
+					limit = {
+						OR = {
+							check_variable = { ROOT.selected_srbm_count > 0}
+							check_variable = { ROOT.selected_mrbm_count > 0}
+							check_variable = { ROOT.selected_icbm_count > 0}
+						}
+						NOT = {
+							OR = {
+								check_variable = { ROOT.deployed_srbm_count > 0 }
+								check_variable = { ROOT.deployed_mrbm_count > 0 }
+								check_variable = { ROOT.deployed_icbm_count > 0 }
+							}
+						}
+					}
+					set_variable = { ROOT.deployed_srbm_count = ROOT.selected_srbm_count }
+					set_variable = { ROOT.deployed_mrbm_count = ROOT.selected_mrbm_count }
+					set_variable = { ROOT.deployed_icbm_count = ROOT.selected_icbm_count }
+
+					var:ROOT.silo_selected_state_id = { subtract_from_variable = { THIS.stored_icbm = ROOT.selected_icbm_count } }
+					var:ROOT.silo_selected_state_id = { subtract_from_variable = { THIS.stored_mrbm = ROOT.selected_mrbm_count } }
+					var:ROOT.silo_selected_state_id = { subtract_from_variable = { THIS.stored_srbm = ROOT.selected_srbm_count } }
+					subtract_from_variable = { ROOT.total_icbm = ROOT.selected_icbm_count }
+					subtract_from_variable = { ROOT.total_mrbm = ROOT.selected_mrbm_count }
+					subtract_from_variable = { ROOT.total_srbm = ROOT.selected_srbm_count }
+
+					set_variable = { ROOT.selected_srbm_count = 0 }
+					set_variable = { ROOT.selected_mrbm_count = 0 }
+					set_variable = { ROOT.selected_icbm_count = 0 }
+
+					# Probably should make it an array or multiple arrays so we can use our specified BMs
+
+					update_stock = yes
+				}
+			}
+
+			# Remove all
+			deploy_button_shift_click = {
+				set_variable = { ROOT.selected_srbm_count = 0 }
+				set_variable = { ROOT.selected_mrbm_count = 0 }
+				set_variable = { ROOT.selected_icbm_count = 0 }
+			}
+		}
+
+		properties = {
+			owner_flag = {
+				image = [THIS.GetFlag]
+			}
+
+			icbm_progress_bar = {
+				frame = icbm_frame
+			}
+
+			mrbm_progress_bar = {
+				frame = mrbm_frame
+			}
+
+			srbm_progress_bar = {
+				frame = srbm_frame
+			}
+		}
+	}
+}

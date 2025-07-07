@@ -1,0 +1,870 @@
+# Gets the loc to be displayed based on what the current v (value) of the element in the array is (the value corresponds to the party id set in the scripted effect).
+defined_name = {
+	name = GetBundestagPartyName
+	text = {
+		trigger = {
+			check_variable = { v = 1 }
+		}
+		localization_key = lse_party_1_name
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 2 }
+		}
+		localization_key = lse_party_2_name
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 3 }
+		}
+		localization_key = lse_party_3_name
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 4 }
+		}
+		localization_key = lse_party_4_name
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 5 }
+		}
+		localization_key = lse_party_5_name
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 6 }
+		}
+		localization_key = lse_party_6_name
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 7 }
+		}
+		localization_key = lse_party_7_name
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 8 }
+		}
+		localization_key = lse_party_8_name
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 9 }
+		}
+		localization_key = lse_party_9_name
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 10 }
+		}
+		localization_key = lse_party_10_name
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 11 }
+		}
+		localization_key = lse_party_11_name
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 12 }
+		}
+		localization_key = lse_party_12_name
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 13 }
+		}
+		localization_key = lse_party_13_name
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 14 }
+		}
+		localization_key = lse_party_14_name
+	}
+	text = {
+		trigger = {
+			check_variable = { v = 15 }
+		}
+		localization_key = lse_party_15_name
+	}
+	text = {
+		localization_key = "Error"
+	}
+}
+
+defined_name = {
+	name = TestGetBundestagCoalition
+
+	text = {
+		trigger = {
+			set_temp_variable = { i2 = v }
+			add_to_temp_variable = { i2 = 1 }
+			
+			set_temp_variable = { i3 = v }
+			add_to_temp_variable = { i3 = 2 }
+
+			set_temp_variable = { temp_party_id = coalitions_array^v }
+			set_temp_variable = { temp_party_id_2 = coalitions_array^i2 }
+			set_temp_variable = { temp_party_id_3 = coalitions_array^i3 }
+			
+			set_temp_variable = { temp_id = coalition_ids^v }
+			set_temp_variable = { temp_id_2 = coalition_ids^i2 }
+			set_temp_variable = { temp_id_3 = coalition_ids^i3 }
+
+			AND = {
+				NOT = { check_variable = { v = 999 } }
+				check_variable = { temp_id = temp_id_2 } # Aktuelle ID ist die gleiche wie die nächste zeile
+				check_variable = { temp_id = temp_id_3 } # Aber nicht gleich wie die übernächste
+			}
+		}
+		localization_key = "[GetBundestagPartyColor1]-[GetBundestagPartyColor2]-[GetBundestagPartyColor3] Coalition"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { i2 = v }
+			add_to_temp_variable = { i2 = 1 }
+			
+			set_temp_variable = { i3 = v }
+			add_to_temp_variable = { i3 = 2 }
+
+			set_temp_variable = { temp_party_id = coalitions_array^v }
+			set_temp_variable = { temp_party_id_2 = coalitions_array^i2 }
+			set_temp_variable = { temp_party_id_3 = coalitions_array^i3 }
+			
+			set_temp_variable = { temp_id = coalition_ids^v }
+			set_temp_variable = { temp_id_2 = coalition_ids^i2 }
+			set_temp_variable = { temp_id_3 = coalition_ids^i3 }
+
+			AND = {
+				check_variable = { temp_id = temp_id_2 } # Aktuelle ID ist die gleiche wie die nächste zeile
+				NOT = {
+					check_variable = { v = 999 }
+					check_variable = { temp_id = temp_id_3 } # Aber nicht gleich wie die übernächste
+				}
+			}
+		}
+		localization_key = "[GetBundestagPartyColor1]-[GetBundestagPartyColor2] Coalition"
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { i2 = v }
+			add_to_temp_variable = { i2 = 1 }
+			
+			set_temp_variable = { i3 = v }
+			add_to_temp_variable = { i3 = 2 }
+
+			set_temp_variable = { temp_party_id = coalitions_array^v }
+			set_temp_variable = { temp_party_id_2 = coalitions_array^i2 }
+			set_temp_variable = { temp_party_id_3 = coalitions_array^i3 }
+			
+			set_temp_variable = { temp_id = coalition_ids^v }
+			set_temp_variable = { temp_id_2 = coalition_ids^i2 }
+			set_temp_variable = { temp_id_3 = coalition_ids^i3 }
+
+			NOT = { check_variable = { v = 999 } }
+		}
+		localization_key = "[GetBundestagPartyColor1] Coalition"
+	}
+
+	text = {
+		localization_key = "Error, no Coalitions Possible!"
+	}
+}
+
+defined_name = {
+	name = GetBundestagCoalitionTT
+
+	text = {
+		trigger = {
+			set_temp_variable = { i2 = v }
+			add_to_temp_variable = { i2 = 1 }
+			
+			set_temp_variable = { i3 = v }
+			add_to_temp_variable = { i3 = 2 }
+
+			set_temp_variable = { temp_party_id = coalitions_array^v }
+			set_temp_variable = { temp_party_id_2 = coalitions_array^i2 }
+			set_temp_variable = { temp_party_id_3 = coalitions_array^i3 }
+			
+			set_temp_variable = { temp_id = coalition_ids^v }
+			set_temp_variable = { temp_id_2 = coalition_ids^i2 }
+			set_temp_variable = { temp_id_3 = coalition_ids^i3 }
+
+			set_temp_variable = { total_seats = bundestag_seat_array^temp_id }
+			add_to_temp_variable = { total_seats = bundestag_seat_array^temp_id_2 }
+			add_to_temp_variable = { total_seats = bundestag_seat_array^temp_id_3 }
+
+			AND = {
+				NOT = { check_variable = { v = 999 } }
+				check_variable = { temp_id = temp_id_2 } # Aktuelle ID ist die gleiche wie die nächste zeile
+				check_variable = { temp_id = temp_id_3 } # Aber nicht gleich wie die übernächste
+			}
+		}
+		localization_key = "The [GetBundestagPartyColor1]-[GetBundestagPartyColor2]-[GetBundestagPartyColor3] is a Coalition between the [GetBundestagPartyName1], [GetBundestagPartyName2] and [GetBundestagPartyName3]."
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { i2 = v }
+			add_to_temp_variable = { i2 = 1 }
+			
+			set_temp_variable = { i3 = v }
+			add_to_temp_variable = { i3 = 2 }
+
+			set_temp_variable = { temp_party_id = coalitions_array^v }
+			set_temp_variable = { temp_party_id_2 = coalitions_array^i2 }
+			set_temp_variable = { temp_party_id_3 = coalitions_array^i3 }
+			
+			set_temp_variable = { temp_id = coalition_ids^v }
+			set_temp_variable = { temp_id_2 = coalition_ids^i2 }
+			set_temp_variable = { temp_id_3 = coalition_ids^i3 }
+
+			set_temp_variable = { total_seats = bundestag_seat_array^temp_id }
+			add_to_temp_variable = { total_seats = bundestag_seat_array^temp_id_2 }
+
+			AND = {
+				check_variable = { temp_id = temp_id_2 } # Aktuelle ID ist die gleiche wie die nächste zeile
+				NOT = {
+					check_variable = { v = 999 }
+					check_variable = { temp_id = temp_id_3 } # Aber nicht gleich wie die übernächste
+				}
+			}
+		}
+		localization_key = "The [GetBundestagPartyColor1]-[GetBundestagPartyColor2] is a Coalition between the [GetBundestagPartyName1] and [GetBundestagPartyName2]."
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { i2 = v }
+			add_to_temp_variable = { i2 = 1 }
+			
+			set_temp_variable = { i3 = v }
+			add_to_temp_variable = { i3 = 2 }
+
+			set_temp_variable = { temp_party_id = coalitions_array^v }
+			set_temp_variable = { temp_party_id_2 = coalitions_array^i2 }
+			set_temp_variable = { temp_party_id_3 = coalitions_array^i3 }
+			
+			set_temp_variable = { temp_id = coalition_ids^v }
+			set_temp_variable = { temp_id_2 = coalition_ids^i2 }
+			set_temp_variable = { temp_id_3 = coalition_ids^i3 }
+
+			set_temp_variable = { total_seats = bundestag_seat_array^temp_id }
+
+			NOT = { check_variable = { v = 999 } }
+		}
+		localization_key = "The [GetBundestagPartyColor1] Governemnt is the [GetBundestagPartyName1] which has a Majority in the Bundestag."
+	}
+
+	text = {
+		localization_key = "Something went wrong :/"
+	}
+}
+
+defined_name = {
+	name = GetBundestagPartyName1
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 0 }
+		}
+		localization_key = lse_party_1_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 1 }
+		}
+		localization_key = lse_party_2_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 2 }
+		}
+		localization_key = lse_party_3_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 3 }
+		}
+		localization_key = lse_party_4_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 4 }
+		}
+		localization_key = lse_party_5_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 5 }
+		}
+		localization_key = lse_party_6_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 6 }
+		}
+		localization_key = lse_party_7_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 7 }
+		}
+		localization_key = lse_party_8_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 8 }
+		}
+		localization_key = lse_party_9_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 9 }
+		}
+		localization_key = lse_party_10_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 10 }
+		}
+		localization_key = lse_party_11_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 11 }
+		}
+		localization_key = lse_party_12_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 12 }
+		}
+		localization_key = lse_party_13_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 13 }
+		}
+		localization_key = lse_party_14_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 14 }
+		}
+		localization_key = lse_party_15_name
+	}
+	text = {
+		localization_key = "Error"
+	}
+}
+
+defined_name = {
+	name = GetBundestagPartyName2
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 0 }
+		}
+		localization_key = lse_party_1_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 1 }
+		}
+		localization_key = lse_party_2_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 2 }
+		}
+		localization_key = lse_party_3_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 3 }
+		}
+		localization_key = lse_party_4_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 4 }
+		}
+		localization_key = lse_party_5_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 5 }
+		}
+		localization_key = lse_party_6_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 6 }
+		}
+		localization_key = lse_party_7_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 7 }
+		}
+		localization_key = lse_party_8_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 8 }
+		}
+		localization_key = lse_party_9_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 9 }
+		}
+		localization_key = lse_party_10_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 10 }
+		}
+		localization_key = lse_party_11_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 11 }
+		}
+		localization_key = lse_party_12_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 12 }
+		}
+		localization_key = lse_party_13_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 13 }
+		}
+		localization_key = lse_party_14_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 14 }
+		}
+		localization_key = lse_party_15_name
+	}
+	text = {
+		localization_key = "Error"
+	}
+}
+
+defined_name = {
+	name = GetBundestagPartyName3
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 0 }
+		}
+		localization_key = lse_party_1_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 1 }
+		}
+		localization_key = lse_party_2_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 2 }
+		}
+		localization_key = lse_party_3_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 3 }
+		}
+		localization_key = lse_party_4_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 4 }
+		}
+		localization_key = lse_party_5_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 5 }
+		}
+		localization_key = lse_party_6_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 6 }
+		}
+		localization_key = lse_party_7_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 7 }
+		}
+		localization_key = lse_party_8_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 8 }
+		}
+		localization_key = lse_party_9_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 9 }
+		}
+		localization_key = lse_party_10_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 10 }
+		}
+		localization_key = lse_party_11_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 11 }
+		}
+		localization_key = lse_party_12_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 12 }
+		}
+		localization_key = lse_party_13_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 13 }
+		}
+		localization_key = lse_party_14_name
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 14 }
+		}
+		localization_key = lse_party_15_name
+	}
+	text = {
+		localization_key = "Error"
+	}
+}
+
+defined_name = {
+	name = GetBundestagPartyColor1
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 0 }
+		}
+		localization_key = lse_party_1_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 1 }
+		}
+		localization_key = lse_party_2_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 2 }
+		}
+		localization_key = lse_party_3_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 3 }
+		}
+		localization_key = lse_party_4_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 4 }
+		}
+		localization_key = lse_party_5_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 5 }
+		}
+		localization_key = lse_party_6_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 6 }
+		}
+		localization_key = lse_party_7_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 7 }
+		}
+		localization_key = lse_party_8_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 8 }
+		}
+		localization_key = lse_party_9_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 9 }
+		}
+		localization_key = lse_party_10_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 10 }
+		}
+		localization_key = lse_party_11_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 11 }
+		}
+		localization_key = lse_party_12_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 12 }
+		}
+		localization_key = lse_party_13_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 13 }
+		}
+		localization_key = lse_party_14_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id = 14 }
+		}
+		localization_key = lse_party_15_color
+	}
+	text = {
+		localization_key = "Error1"
+	}
+}
+
+defined_name = {
+	name = GetBundestagPartyColor2
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 0 }
+		}
+		localization_key = lse_party_1_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 1 }
+		}
+		localization_key = lse_party_2_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 2 }
+		}
+		localization_key = lse_party_3_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 3 }
+		}
+		localization_key = lse_party_4_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 4 }
+		}
+		localization_key = lse_party_5_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 5 }
+		}
+		localization_key = lse_party_6_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 6 }
+		}
+		localization_key = lse_party_7_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 7 }
+		}
+		localization_key = lse_party_8_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 8 }
+		}
+		localization_key = lse_party_9_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 9 }
+		}
+		localization_key = lse_party_10_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 10 }
+		}
+		localization_key = lse_party_11_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 11 }
+		}
+		localization_key = lse_party_12_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 12 }
+		}
+		localization_key = lse_party_13_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 13 }
+		}
+		localization_key = lse_party_14_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_2 = 14 }
+		}
+		localization_key = lse_party_15_color
+	}
+	text = {
+		localization_key = "Error2"
+	}
+}
+
+defined_name = {
+	name = GetBundestagPartyColor3
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 0 }
+		}
+		localization_key = lse_party_1_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 1 }
+		}
+		localization_key = lse_party_2_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 2 }
+		}
+		localization_key = lse_party_3_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 3 }
+		}
+		localization_key = lse_party_4_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 4 }
+		}
+		localization_key = lse_party_5_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 5 }
+		}
+		localization_key = lse_party_6_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 6 }
+		}
+		localization_key = lse_party_7_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 7 }
+		}
+		localization_key = lse_party_8_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 8 }
+		}
+		localization_key = lse_party_9_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 9 }
+		}
+		localization_key = lse_party_10_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 10 }
+		}
+		localization_key = lse_party_11_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 11 }
+		}
+		localization_key = lse_party_12_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 12 }
+		}
+		localization_key = lse_party_13_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 13 }
+		}
+		localization_key = lse_party_14_color
+	}
+	text = {
+		trigger = {
+			check_variable = { temp_party_id_3 = 14 }
+		}
+		localization_key = lse_party_15_color
+	}
+	text = {
+		localization_key = "Error3"
+	}
+}
+
+# Since index starts as 0, i can get the current seat number by jut adding it by one and then displaying it.
+defined_name = {
+	name = GetBundestagSeatName
+	text = {
+		trigger = {
+			set_temp_variable = { temp_seat = bundestag_main_index }
+			add_to_temp_variable = { temp_seat = 1 }
+			check_variable = { temp_seat > 0 }
+		}
+		localization_key = bundestag_seat_name
+	}
+}
+
+defined_name = {
+	name = GetBundestagSeatsNum
+	text = {
+		trigger = {
+			set_temp_variable = { seats = v }
+			subtract_from_temp_variable = { seats = 1 }
+		}
+		localization_key = "[?bundestag_seat_array^seats]"
+	}
+}

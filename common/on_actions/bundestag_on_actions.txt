@@ -1,0 +1,10 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			GER = {
+				bundestag_gui_initial = yes
+				debug_coalitions_print_2 = yes
+			}
+		}
+	}
+}

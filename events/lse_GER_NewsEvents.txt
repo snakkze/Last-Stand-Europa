@@ -1,0 +1,15 @@
+add_namespace = lse_ger_news
+
+# Question of Trust
+news_event = {
+	id = lse_ger_news.1
+	title = lse_ger_news.1.t
+	desc = lse_ger_news.1.d
+	picture = GFX_news_lse_question_of_trust
+
+	is_triggered_only = yes
+
+	option = {
+		name = news_fpw.1.a
+	}
+}

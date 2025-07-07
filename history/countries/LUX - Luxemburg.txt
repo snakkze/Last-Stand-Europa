@@ -1,5 +1,7 @@
 ﻿capital = 8 # Luxembourg City
 
+add_ai_strategy = { type = alliance id = USA value = 200 }
+
 #oob = "LUX_1936"
 
 # Starting tech

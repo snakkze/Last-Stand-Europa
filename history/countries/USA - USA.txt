@@ -1,5 +1,32 @@
 ﻿capital = 361 # Washington DC
 
+lse_setup_nuclear_warheads = yes
+add_nuclear_bombs = 5044
+
+# ICBM / Intercontinental Ballistic Missile
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 400
+}
+
+# SLBM / Submarine Launched Ballistic Missile
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 1920
+}
+
+# THERMONUCLEAR / Bombers
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 500
+}
+
+# FISSION / Cruise missiles, Nuclear Torpedos
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 300
+}
+
 #oob = "USA_1936"
 
 starting_train_buffer = 5
@@ -247,6 +274,8 @@ add_to_faction = POR
 add_to_faction = LUX
 add_to_faction = BEL
 add_to_faction = HOL
+
+add_ai_strategy = { type = alliance id = THIS value = 200 }
 
 recruit_character = USA_joe_biden
 

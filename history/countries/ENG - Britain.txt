@@ -1,18 +1,14 @@
 ﻿capital = 126
 
-if = {
-	limit = {
-		NOT = {
-			has_dlc = "No Step Back"
-		}
-	}
-#	set_oob = "ENG_1936"
-}
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-#	set_oob = "ENG_1936_nsb"
+add_ai_strategy = { type = alliance id = USA value = 200 }
+
+lse_setup_nuclear_warheads = yes
+add_nuclear_bombs = 225
+
+# SLBM / Submarine Launched Ballistic Missile
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 120
 }
 
 starting_train_buffer = 4

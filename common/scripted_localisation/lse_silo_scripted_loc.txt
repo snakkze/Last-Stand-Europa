@@ -1,0 +1,38 @@
+defined_text = {
+    name = silo_get_srbm_selected_count
+    text = {
+        trigger = {
+            check_variable = { ROOT.selected_srbm_count < 10 }
+        }
+        localization_key = "0[?ROOT.selected_srbm_count]"
+    }
+    text = {
+        localization_key = "[?ROOT.selected_srbm_count]"
+    }
+}
+
+defined_text = {
+    name = silo_get_mrbm_selected_count
+    text = {
+        trigger = {
+            check_variable = { ROOT.selected_mrbm_count < 10 }
+        }
+        localization_key = "0[?ROOT.selected_mrbm_count]"
+    }
+    text = {
+        localization_key = "[?ROOT.selected_mrbm_count]"
+    }
+}
+
+defined_text = {
+    name = silo_get_icbm_selected_count
+    text = {
+        trigger = {
+            check_variable = { ROOT.selected_icbm_count < 10 }
+        }
+        localization_key = "0[?ROOT.selected_icbm_count]"
+    }
+    text = {
+        localization_key = "[?ROOT.selected_icbm_count]"
+    }
+}

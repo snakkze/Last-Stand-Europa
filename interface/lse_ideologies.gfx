@@ -16,4 +16,9 @@ spriteTypes = {
 		name = "GFX_ideology_socialist_social_democracy_subtype"
 		texturefile = "gfx/interface/ideologies/socialism_social_democracy_sub.dds"
 	}
+
+	spriteType = {
+		name = "GFX_ideology_greenism"
+		texturefile = "gfx/interface/ideologies/greenism.dds"
+	}
 }

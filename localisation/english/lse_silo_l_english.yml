@@ -1,0 +1,4 @@
+﻿l_english:
+ LSE_ICBM_BAR_TOOLTIP:0 "[?ROOT.state_icbm] - [?ROOT.total_icbm]"
+ LSE_MRBM_BAR_TOOLTIP:0 "[?ROOT.state_mrbm] - [?ROOT.total_mrbm]"
+ LSE_SRBM_BAR_TOOLTIP:0 "[?ROOT.state_srbm] - [?ROOT.total_srbm]"

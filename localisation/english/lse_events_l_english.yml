@@ -1,0 +1,6 @@
+﻿l_english:
+ ger_event_bg:0 "\n\n\n\n\n\n£GER_event_news_bg"
+ eng_event_bg:0 "\n\n\n\n\n\n£ENG_event_news_bg"
+
+ lse_ger_news.1.t:0 "German Parliament Dissolved! [lse_news_event_bg_scripted_loc]"
+ lse_ger_news.1.d:0 "German President Frank-Walter Steinmeier dissolved parliament and called early elections for February 23 following the collapse of Chancellor Olaf Scholz's governing coalition. Scholz, who lost the recent confidence vote, now leads a minority government."

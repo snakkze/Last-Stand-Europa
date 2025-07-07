@@ -1,4 +1,19 @@
 ﻿capital = 454
+
+lse_setup_nuclear_warheads = yes
+add_nuclear_bombs = 90
+
+# ICBM / Intercontinental Ballistic Missile
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 50
+}
+
+# SLBM / Submarine Launched Ballistic Missile
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 40
+}
  
 # Starting tech
 set_technology = {

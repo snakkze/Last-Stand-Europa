@@ -1,0 +1,22 @@
+state={
+	id=995
+	name="STATE_995"
+	provinces={
+		13386 13388
+	}
+	
+	state_category = rural
+
+	history= {
+        owner = ENG
+		buildings = {
+			infrastructure = 2
+			13386 = {
+				naval_base = 1
+			}
+		}
+	}
+	manpower=18195
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

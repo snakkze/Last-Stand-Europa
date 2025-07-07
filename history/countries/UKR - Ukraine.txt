@@ -4,6 +4,20 @@
 
 set_research_slots = 3
 
+set_politics = {
+	ruling_party = greenism
+	last_election = "2019.04.21"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	greenism = 75
+	liberalism_1 = 25
+}
+
+recruit_character = UKR_volodymyr_zelenskyy
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -81,12 +95,6 @@ if = {
 		basic_battery = 1
 		basic_torpedo = 1
 	}
-}
-
-set_popularities = {
-	democratic = 20
-	fascism = 30
-	communism = 50
 }
 
 

@@ -20,6 +20,33 @@ set_party_name = {
 recruit_character = SOV_vladimir_putin
 
 add_opinion_modifier = { target = UKR modifier = hostile_status }
+lse_setup_nuclear_warheads = yes
+add_nuclear_bombs = 5580
+
+# ICBM / Intercontinental Ballistic Missile
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 1600
+}
+
+# SLBM / Submarine Launched Ballistic Missile
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 1024
+}
+
+# THERMONUCLEAR / Bombers
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 580
+}
+
+# FISSION / Cruise missiles, Nuclear Torpedos
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 1080
+}
+
 
 #declare_war_on = {
 #	target = UKR

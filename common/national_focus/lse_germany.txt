@@ -1005,6 +1005,7 @@ focus_tree = {
 		}
 	}
 	
+	# European Union Military Assistance Mission Ukraine
 	focus = {
 		id = GER_operation_euman
 		icon = GFX_goal_unknown
@@ -1373,11 +1374,11 @@ focus_tree = {
 		id = GER_continuation_of_scholz
 		icon = GFX_goal_unknown
 		prerequisite = { focus = GER_election_of_2025 }
-		mutually_exclusive = { focus = GER_weidel focus = GER_habeck focus = GER_merz }
+		mutually_exclusive = { focus = GER_weidel focus = GER_habeck focus = GER_merz focus = GER_return_from_the_dead }
 
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
-		x = 6
+		x = 0
 		y = 1
 		relative_position_id = GER_election_of_2025
 
@@ -1391,16 +1392,41 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
+
+	# Linke
+	focus = {
+		id = GER_return_from_the_dead
+		icon = GFX_goal_unknown
+		prerequisite = { focus = GER_election_of_2025 }
+		mutually_exclusive = { focus = GER_weidel focus = GER_habeck focus = GER_merz focus = GER_continuation_of_scholz }
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		x = -10
+		y = 1
+		relative_position_id = GER_election_of_2025
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# If they actually won you can do this focus, but most likely they didnt so this is just a left path
+		}
+	}
 	
 	focus = {
 		id = GER_habeck
 		icon = GFX_goal_unknown
 		prerequisite = { focus = GER_election_of_2025 }
-		mutually_exclusive = { focus = GER_continuation_of_scholz focus = GER_weidel focus = GER_merz }
+		mutually_exclusive = { focus = GER_continuation_of_scholz focus = GER_weidel focus = GER_merz focus = GER_return_from_the_dead }
 
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
-		x = 2
+		x = -4
 		y = 1
 		relative_position_id = GER_election_of_2025
 
@@ -1419,11 +1445,11 @@ focus_tree = {
 		id = GER_merz
 		icon = GFX_goal_unknown
 		prerequisite = { focus = GER_election_of_2025 }
-		mutually_exclusive = { focus = GER_continuation_of_scholz focus = GER_habeck focus = GER_weidel }
+		mutually_exclusive = { focus = GER_continuation_of_scholz focus = GER_habeck focus = GER_weidel focus = GER_return_from_the_dead }
 
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
-		x = -2
+		x = 4
 		y = 1
 		relative_position_id = GER_election_of_2025
 
@@ -1442,11 +1468,11 @@ focus_tree = {
 		id = GER_weidel
 		icon = GFX_goal_unknown
 		prerequisite = { focus = GER_election_of_2025 }
-		mutually_exclusive = { focus = GER_continuation_of_scholz focus = GER_habeck focus = GER_merz }
+		mutually_exclusive = { focus = GER_continuation_of_scholz focus = GER_habeck focus = GER_merz focus = GER_return_from_the_dead }
 
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
-		x = -6
+		x = 10
 		y = 1
 		relative_position_id = GER_election_of_2025
 
@@ -1458,6 +1484,27 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = GER_ream_the_heer
+		icon = GFX_goal_unknown
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+		relative_position_id = GER_failed_question_of_trust
+		x = 30
+		y = 0
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# gets event "dissolution of the bundestag"
 		}
 	}
 }

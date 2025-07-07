@@ -1,0 +1,21 @@
+state={
+	id=992
+	name="STATE_992"
+	
+	
+	state_category = town
+
+	history={
+        owner = KOR
+        add_core_of = KOR
+
+		set_demilitarized_zone = yes
+	}
+
+	provinces={
+		13378 13379 13380 13381
+	}
+	manpower=138
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

@@ -1,4 +1,23 @@
 defined_text = {
+    name = lse_news_event_bg_scripted_loc
+    text = {
+        trigger = {
+            original_tag = GER
+        }
+        localization_key = ger_event_bg
+    }
+    text = {
+        trigger = {
+            original_tag = ENG
+        }
+        localization_key = eng_event_bg
+    }
+    text = {
+        localization_key = eng_event_bg
+    }
+}
+
+defined_text = {
     name = lse_party_name_1_scripted_loc
     text = {
         trigger = {

@@ -1,0 +1,276 @@
+guiTypes = {
+	containerWindowType = {
+        name = "rocket_silo_mapicon_gui_container"
+        position = { x = 0 y = 0 }
+		size = { width = 100%% height = 100%% }
+
+		buttonType = {
+			name = "rocket_silo_mapicon_button"
+			quadTextureSprite = "GFX_mapicon_rocket_silo"
+			position = { x = -12 y = -15 }
+			orientation = CENTER
+		}
+    }
+
+	containerWindowType = {
+        name = "rocket_silo_gui_container"
+        position = { x = 990 y = 540 }
+		size = { width = 950 height = 550 }
+		moveable = yes
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_thin_border2"
+		}
+
+		containerWindowType = {
+			name = "bottom_dock"
+			position = { x = 0 y = 330 }
+			size = { width = 100%% height = 40% }
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_thin_border2"
+				alwaystransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "left_dock"
+			size = { width = 300 height = 100%% }
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_thin_border2"
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "national_stock_text"
+				position = { x = 20 y = 350 }
+				font = "lse_20din_next"
+				text = "State Missile Stock"
+				format = left
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "icbm_text"
+				position = { x = 20 y = 385 }
+				font = "lse_16din_next"
+				text = "ICBM - [?ROOT.state_icbm]"
+				format = left
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="icbm_progress_bar"
+				spriteType = "GFX_silo_progress_bar"
+				position = { x = 20 y = 410 }
+				pdx_tooltip = "LSE_ICBM_BAR_TOOLTIP"
+			}
+
+			instantTextBoxType = {
+				name = "mrbm_text"
+				position = { x = 20 y = 440 }
+				font = "lse_16din_next"
+				text = "MRBM - [?ROOT.state_mrbm]"
+				format = left
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name ="mrbm_progress_bar"
+				spriteType = "GFX_silo_progress_bar"
+				position = { x = 20 y = 465 }
+				pdx_tooltip = "LSE_MRBM_BAR_TOOLTIP"
+			}
+
+			instantTextBoxType = {
+				name = "srbm_text"
+				position = { x = 20 y = 495 }
+				font = "lse_16din_next"
+				text = "SRBM - [?ROOT.state_srbm]"
+				format = left
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+			
+			iconType = {
+				name ="srbm_progress_bar"
+				spriteType = "GFX_silo_progress_bar"
+				position = { x = 20 y = 520 }
+				pdx_tooltip = "LSE_SRBM_BAR_TOOLTIP"
+			}
+		}
+
+		containerWindowType = {
+			name = "rocket_silo_window_header"
+		
+			iconType = {
+				name = "window_header"
+				position = { x = 9 y = 5 }
+				quadTextureSprite ="GFX_window_header"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "owner_flag"
+				quadTextureSprite ="GFX_flag_small"
+				position = { x = 10 y = 8 }
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "silo_name"
+				position = { x = 50 y = 10 }
+				maxWidth = 2000
+				font = "lse_18din_next"
+				text = "Rocket Silo - [?ROOT.silo_selected_state.GetName]"
+				format = left
+				fixedsize = yes
+				alwaystransparent = yes
+	
+			}
+		}
+
+		containerWindowType = {
+            name = "silo_missiles"
+            position = { x = 0	 y = 30 }
+            size = { width = 300 height = 306 }
+            clipping = yes
+            verticalScrollbar = "right_vertical_slider"
+            margin = {
+                top = 18
+                left = 0
+                bottom = 15
+                right = 0
+            }
+
+          	background = {
+                name = "Background"
+                quadTextureSprite ="GFX_tiled_bg_1_scrollbar"
+				alwaystransparent = yes
+            }
+
+			gridboxtype = {
+				name = "silo_missiles_grid"
+				position = { x = -10 y = 0 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 210 height = 18 }
+				add_horizontal = no
+			}
+ 		}
+
+		instantTextBoxType = {
+			name = "mdc_text"
+			position = { x = 480 y = 345 }
+			font = "lse_24din_next"
+			maxWidth = 500
+			text = "Missile Deployment Console"
+			format = left
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+			
+		instantTextBoxType = {
+			name = "add_srbm_text"
+			position = { x = 343 y = 390 }
+			font = "lse_18din_next"
+			text = "Add SRBM's"
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "add_srbm_button"
+			position = { x = 414 y = 415 }
+			quadTextureSprite ="GFX_textbox"
+			buttonText = "[silo_get_srbm_selected_count]"
+			buttonFont = "lse_24din_next"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+			
+		instantTextBoxType = {
+			name = "add_mrbm_text"
+			position = { x = 523 y = 390 }
+			font = "lse_18din_next"
+			text = "Add MRBM's"
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+			
+		buttonType = {
+			name = "add_mrbm_button"
+			position = { x = 594 y = 415 }
+			quadTextureSprite ="GFX_textbox"
+			buttonText = "[silo_get_mrbm_selected_count]"
+			buttonFont = "lse_24din_next"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+			
+		instantTextBoxType = {
+			name = "add_icbm_text"
+			position = { x = 696 y = 390 }
+			font = "lse_18din_next"
+			text = "Add ICBM's"
+			format = center
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+			
+		buttonType = {
+			name = "add_icbm_button"
+			position = { x = 767 y = 415 }
+			quadTextureSprite ="GFX_textbox"
+			buttonText = "[silo_get_icbm_selected_count]"
+			buttonFont = "lse_24din_next"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+			
+		buttonType = {
+			name = "deploy_button"
+			position = { x = 414 y = 485 }
+			quadTextureSprite ="GFX_silo_deploy"
+			buttonText = "Queue for Deployment"
+			buttonFont = "lse_24din_next"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+			
+		buttonType = {
+			name = "close_button"
+			position = { x = -43 y = 5 }
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "Main_14_black"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+    }
+
+	containerWindowType = {
+        name = "silo_missiles_entry"
+        position = { x = 0 y = 0 }
+		size = { width = 300 height = 18 }
+		
+		instantTextboxType = {
+			name = "silo_name"
+			position = { x = 20 y = 0 }
+			font = "lse_16din_next"
+			maxWidth = 200
+			maxHeight = 18
+			format = left
+			text = "Hiii :3"
+		}
+    }
+}

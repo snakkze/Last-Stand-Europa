@@ -1,0 +1,281 @@
+is_double = {
+
+}
+
+
+is_partner_ideology_okay = {
+	OR = {
+		# Moderate (SPD-CDU)
+		AND = {
+			OR = {
+				check_variable = { i = 4 }
+				check_variable = { i = 5 }
+				check_variable = { i = 6 }
+				check_variable = { i = 7 }
+				check_variable = { i = 8 }
+				check_variable = { i = 14 }
+			}
+			OR = {
+				check_variable = { p = 4 }
+				check_variable = { p = 5 }
+				check_variable = { p = 6 }
+				check_variable = { p = 7 }
+				check_variable = { p = 8 }
+				check_variable = { p = 14 }
+			}
+		}
+		# Schwarz-Blau (-Gelb), (-WU)
+		AND = {
+			has_country_flag = lse_fallen_firewall
+			OR = {
+				check_variable = { i = 7 }
+				check_variable = { i = 8 }
+				check_variable = { i = 9 }
+				check_variable = { i = 10 }
+			}
+			OR = {
+				check_variable = { p = 7 }
+				check_variable = { p = 8 }
+				check_variable = { p = 9 }
+				check_variable = { p = 10 }
+			}
+		}
+		# Schwarz-Blau (CDU und Hohenzollern, mir fällt selber nix dazu ein)
+		AND = {
+			has_country_flag = lse_fallen_firewall
+			OR = {
+				check_variable = { i = 8 }
+				check_variable = { i = 13 }
+			}
+			OR = {
+				check_variable = { p = 8 }
+				check_variable = { p = 13 }
+			}
+		}
+		# Left (Linke-Green)
+		AND = {
+			OR = {
+				check_variable = { i = 3 }
+				check_variable = { i = 4 }
+				check_variable = { i = 5 }
+			}
+			OR = {
+				check_variable = { p = 3 }
+				check_variable = { p = 4 }
+				check_variable = { p = 5 }
+			}
+		}
+		# Left (DKP-Linke)
+		AND = {
+			OR = {
+				check_variable = { i = 0 }
+				check_variable = { i = 1 }
+				check_variable = { i = 3 }
+			}
+			OR = {
+				check_variable = { p = 0 }
+				check_variable = { p = 1 }
+				check_variable = { p = 3 }
+			}
+		}
+		# Blau-Magenta
+		AND = {
+			OR = {
+				check_variable = { i = 2 }
+				check_variable = { i = 10 }
+			}
+			OR = {
+				check_variable = { p = 2 }
+				check_variable = { p = 10 }
+			}
+		}
+		# Brombeere
+		AND = {
+			OR = {
+				check_variable = { i = 2 }
+				check_variable = { i = 4 }
+				check_variable = { i = 8 }
+			}
+			OR = {
+				check_variable = { p = 2 }
+				check_variable = { p = 4 }
+				check_variable = { p = 8 }
+			}
+		}
+		# Right Wing
+		AND = {
+			OR = {
+				check_variable = { i = 9 }
+				check_variable = { i = 10 }
+				check_variable = { i = 11 }
+				check_variable = { i = 12 }
+			}
+			OR = {
+				check_variable = { p = 9 }
+				check_variable = { p = 10 }
+				check_variable = { p = 11 }
+				check_variable = { p = 12 }
+			}
+		}
+	}
+}
+
+is_partner_ideology_okay_2 = {
+	OR = {
+		# Moderate (SPD-CDU)
+		AND = {
+			OR = {
+				check_variable = { i = 4 }
+				check_variable = { i = 5 }
+				check_variable = { i = 6 }
+				check_variable = { i = 7 }
+				check_variable = { i = 8 }
+				check_variable = { i = 14 }
+			}
+			OR = {
+				check_variable = { p = 4 }
+				check_variable = { p = 5 }
+				check_variable = { p = 6 }
+				check_variable = { p = 7 }
+				check_variable = { p = 8 }
+				check_variable = { p = 14 }
+			}
+			OR = {
+				check_variable = { o = 4 }
+				check_variable = { o = 5 }
+				check_variable = { o = 6 }
+				check_variable = { o = 7 }
+				check_variable = { o = 8 }
+				check_variable = { o = 14 }
+			}
+		}
+		# Schwarz-Blau (-Gelb), (-WU)
+		AND = {
+			has_country_flag = lse_fallen_firewall
+			OR = {
+				check_variable = { i = 7 }
+				check_variable = { i = 8 }
+				check_variable = { i = 9 }
+				check_variable = { i = 10 }
+			}
+			OR = {
+				check_variable = { p = 7 }
+				check_variable = { p = 8 }
+				check_variable = { p = 9 }
+				check_variable = { p = 10 }
+			}
+			OR = {
+				check_variable = { o = 7 }
+				check_variable = { o = 8 }
+				check_variable = { o = 9 }
+				check_variable = { o = 10 }
+			}
+		}
+		# Schwarz-Blau (CDU und Hohenzollern, mir fällt selber nix dazu ein)
+		AND = {
+			has_country_flag = lse_fallen_firewall
+			OR = {
+				check_variable = { i = 8 }
+				check_variable = { i = 13 }
+			}
+			OR = {
+				check_variable = { p = 8 }
+				check_variable = { p = 13 }
+			}
+			OR = {
+				check_variable = { o = 8 }
+				check_variable = { o = 13 }
+			}
+		}
+		# Left (Linke-Green)
+		AND = {
+			OR = {
+				check_variable = { i = 3 }
+				check_variable = { i = 4 }
+				check_variable = { i = 5 }
+			}
+			OR = {
+				check_variable = { p = 3 }
+				check_variable = { p = 4 }
+				check_variable = { p = 5 }
+			}
+			OR = {
+				check_variable = { o = 3 }
+				check_variable = { o = 4 }
+				check_variable = { o = 5 }
+			}
+		}
+		# Left (DKP-Linke)
+		AND = {
+			OR = {
+				check_variable = { i = 0 }
+				check_variable = { i = 1 }
+				check_variable = { i = 3 }
+			}
+			OR = {
+				check_variable = { p = 0 }
+				check_variable = { p = 1 }
+				check_variable = { p = 3 }
+			}
+			OR = {
+				check_variable = { o = 0 }
+				check_variable = { o = 1 }
+				check_variable = { o = 3 }
+			}
+		}
+		# Blau-Magenta
+		AND = {
+			OR = {
+				check_variable = { i = 2 }
+				check_variable = { i = 10 }
+			}
+			OR = {
+				check_variable = { p = 2 }
+				check_variable = { p = 10 }
+			}
+			OR = {
+				check_variable = { o = 2 }
+				check_variable = { o = 10 }
+			}
+		}
+		# Brombeere
+		AND = {
+			OR = {
+				check_variable = { i = 2 }
+				check_variable = { i = 4 }
+				check_variable = { i = 8 }
+			}
+			OR = {
+				check_variable = { p = 2 }
+				check_variable = { p = 4 }
+				check_variable = { p = 8 }
+			}
+			OR = {
+				check_variable = { o = 2 }
+				check_variable = { o = 4 }
+				check_variable = { o = 8 }
+			}
+		}
+		# Right Wing
+		AND = {
+			OR = {
+				check_variable = { i = 9 }
+				check_variable = { i = 10 }
+				check_variable = { i = 11 }
+				check_variable = { i = 12 }
+			}
+			OR = {
+				check_variable = { p = 9 }
+				check_variable = { p = 10 }
+				check_variable = { p = 11 }
+				check_variable = { p = 12 }
+			}
+			OR = {
+				check_variable = { o = 9 }
+				check_variable = { o = 10 }
+				check_variable = { o = 11 }
+				check_variable = { o = 12 }
+			}
+		}
+	}
+}

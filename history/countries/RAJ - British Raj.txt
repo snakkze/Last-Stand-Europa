@@ -1,5 +1,26 @@
 ﻿capital = 439
 
+lse_setup_nuclear_warheads = yes
+add_nuclear_bombs = 160
+
+# ICBM / Intercontinental Ballistic Missile
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 40
+}
+
+# SLBM / Submarine Launched Ballistic Missile
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 24
+}
+
+# THERMONUCLEAR / Bombers
+add_equipment_to_stockpile = {
+	type = nuclear_missile_equipment_2
+	amount = 30
+}
+
 #oob = "RAJ_1936"
 if = {
 	limit = { has_dlc = "By Blood Alone" }

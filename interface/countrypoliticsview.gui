@@ -64,8 +64,8 @@ guiTypes = {
                 right = 0
             }
 
-          background = {
-                  name = "Background"
+          	background = {
+                name = "Background"
                 quadTextureSprite ="GFX_tiled_bg_1_scrollbar"
             }
 

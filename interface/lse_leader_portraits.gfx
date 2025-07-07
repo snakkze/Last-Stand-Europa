@@ -32,6 +32,12 @@ spriteTypes = {
 		name = "GFX_portrait_SOV_vladimir_putin"
 		texturefile = "gfx/leaders/SOV/vladimir_putin.png"
 	}
+
+	# UKR
+	spriteType = {
+		name = "GFX_portrait_SOV_volodymyr_zelenskyy"
+		texturefile = "gfx/leaders/UKR/selensky.dds"
+	}
 	
 	# USA
 	spriteType = {

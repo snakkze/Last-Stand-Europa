@@ -1,0 +1,43 @@
+scripted_gui = {
+	bundestag_gui = {
+		context_type = decision_category
+		window_name = "bundestag_gui_container"
+
+		dynamic_lists = {
+			bundestag_semicircle_main_grid = {
+				array = bundestag_main_array
+				index = bundestag_main_index
+				change_scope = no
+				entry_container = bundestag_semicircle_main_entry
+			}
+			bundestag_member_grid = {
+				array = bundestag_member_sorted_array
+				index = bundestag_member_index
+				change_scope = no
+				entry_container = bundestag_member_entry
+			}
+			bundestag_coalition_grid = {
+				array = coalition_indexes
+				change_scope = no
+				entry_container = bundestag_coalition_entry
+			}
+		}
+
+		effects = {
+		}
+
+		properties = {
+			bundestag_main_icon = {
+				frame = v
+			}
+			bundestag_semicircle_main_icon = {
+				frame = v
+				x = bundestag_x_array^bundestag_main_index
+				y = bundestag_y_array^bundestag_main_index
+			}
+			bundestag_member_icon = {
+				frame = v
+			}
+		}
+	}
+}

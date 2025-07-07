@@ -1,0 +1,9 @@
+spriteTypes = {
+	##################
+	### NEWSPAPERS ###
+	##################
+	spriteType = {
+		name = "GFX_news_lse_question_of_trust"
+		texturefile = "gfx/event_pictures/news/ger/lse_ger_news_001.dds"
+	}
+}

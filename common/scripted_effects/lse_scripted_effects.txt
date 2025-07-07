@@ -1,0 +1,8 @@
+lse_setup_nuclear_warheads = {
+	SOV = {
+		set_variable = { THIS.total_icbm = 1600 }
+		set_variable = { THIS.total_mrbm = 0 }
+		set_variable = { THIS.total_srbm = 0 }
+	}
+
+}

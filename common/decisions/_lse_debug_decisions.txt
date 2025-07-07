@@ -1,0 +1,98 @@
+debug_decisions = {
+
+	lse_unlock_nuke = {
+		priority = 99
+		available = {
+			is_ai = no
+		}
+
+		visible = {
+			is_ai = no
+			is_debug = yes
+			has_global_flag = show_debug_decisions_flag
+		}
+		complete_effect = {
+			hidden_effect = {	
+				set_technology = {
+					atomic_research = 1
+					popup = no
+				}
+
+				set_technology = {
+					experimental_rockets = 1
+					popup = no
+				}
+
+				set_technology = {
+					sp_rockets_improved_guidance = 1
+					popup = no
+				}
+
+				set_technology = {
+					sp_rockets_dual_chamber_rocket_engine_1 = 1
+					popup = no
+				}
+
+				set_technology = {
+					sp_rockets_dual_chamber_rocket_engine_2 = 1
+					popup = no
+				}
+
+				set_technology = {
+					sp_rockets_rocket_bomber = 1
+					popup = no
+				}
+
+				set_technology = {
+					sp_rockets_improved_rocket_bomber = 1
+					popup = no
+				}
+
+				complete_special_project= sp:sp_nuclear_reactor
+				complete_special_project= sp:sp_commercial_nuclear_reactor
+				complete_special_project= sp:sp_nuclear_engines
+				complete_special_project= sp:sp_nuclear_bomb
+				complete_special_project= sp:sp_thermo_nuclear_bomb
+				complete_special_project= sp:sp_nuclear_warheads
+				complete_special_project= sp:sp_rockets_flying_bomb
+				complete_special_project= sp:sp_rockets_ballistic_missile
+				complete_special_project= sp:sp_rockets_medium_range_ballistic_missile
+				complete_special_project= sp:sp_rockets_long_range_ballistic_missile
+				complete_special_project= sp:sp_rockets_ground_to_air_missile
+				complete_special_project= sp:sp_rocket_interceptor	
+			}
+
+			add_nuclear_bombs = 100
+
+			# Nukes, not equipment
+			add_equipment_to_stockpile = {
+				type = nuclear_missile_equipment_1
+				amount = 100
+			}
+
+			add_equipment_to_stockpile = {
+				type = nuclear_missile_equipment_2
+				amount = 100
+			}
+			#
+
+			# Medium Range Ballistic Missile 
+			add_equipment_to_stockpile = {
+				type = ballistic_missile_equipment_2
+				amount = 2
+			}
+
+			# Intercontinental Ballistic Missile
+			add_equipment_to_stockpile = {
+				type = ballistic_missile_equipment_3
+				amount = 2
+			}
+
+			# Surface-to-Air Missile I 
+			add_equipment_to_stockpile = {
+				type = sam_missile_equipment_1
+				amount = 5
+			}
+		}
+	}
+}

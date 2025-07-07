@@ -1,5 +1,7 @@
 ﻿capital = 105 # Montenegro
 
+add_ai_strategy = { type = alliance id = USA value = 200 }
+
 #oob = "MNT_1936"
 
 set_research_slots = 3

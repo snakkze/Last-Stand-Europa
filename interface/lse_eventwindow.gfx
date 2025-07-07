@@ -1,0 +1,16 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_news_event_button_minimize"
+		texturefile = "gfx/interface/news_event_button_minimize.dds"
+	}
+	spriteType = {
+		name = "GFX_ENG_event_news_bg"
+		texturefile = "gfx/interface/eng_event_news_bg.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_GER_event_news_bg"
+		texturefile = "gfx/interface/ger_event_news_bg.dds"
+		legacy_lazy_load = no
+	}
+}	

@@ -1,0 +1,17 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			lse_setup_nuclear_warheads = yes
+			every_country = {
+				limit = {
+					NOT = {
+						has_variable = THIS.total_icbm
+					}
+				}
+				set_variable = { THIS.total_icbm = 0 }
+				set_variable = { THIS.total_mrbm = 0 }
+				set_variable = { THIS.total_srbm = 0 }
+			}
+		}
+	}
+}

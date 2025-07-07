@@ -1,0 +1,71 @@
+add_ws_and_sb = {
+	add_stability = @value
+	add_war_support = @value
+}
+
+open_rocket_silo_gui = {
+	if = {
+		limit = {
+			NOT = {
+				has_variable = icbm_frame
+			}
+		}
+		set_variable = { icbm_frame = 0 } # 0 - 259, progressbar
+		set_variable = { mrbm_frame = 0 } #
+		set_variable = { srbm_frame = 0 } #
+		set_variable = { ROOT.selected_srbm_count = 0 }
+		set_variable = { ROOT.selected_mrbm_count = 0 }
+		set_variable = { ROOT.selected_icbm_count = 0 }
+		update_stock = yes
+	} else = {
+		update_stock = yes
+	}
+
+	set_country_flag = rocket_silo_gui
+}
+
+update_stock = {
+	set_temp_variable = { temp_total_frames = 259 }
+	if = {
+		limit = {
+			NOT = {
+				check_variable = { ROOT.total_icbm = 0 }
+			}
+			set_temp_variable = { temp_total_icbm = ROOT.total_icbm }
+			var:ROOT.silo_selected_state_id = { set_temp_variable = { state_icbm = THIS.stored_icbm } }
+		}
+		set_variable = { ROOT.state_icbm = state_icbm }
+		multiply_temp_variable = { state_icbm = temp_total_frames } 
+		divide_temp_variable = { state_icbm = temp_total_icbm }
+		round_temp_variable = state_icbm
+		set_variable = { icbm_frame = state_icbm }
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = { ROOT.total_mrbm = 0 }
+			}
+			set_temp_variable = { temp_total_mrbm = ROOT.total_mrbm }
+			var:ROOT.silo_selected_state_id = { set_temp_variable = { state_mrbm = THIS.stored_mrbm } }
+		}
+		set_variable = { ROOT.state_mrbm = state_mrbm }
+		multiply_temp_variable = { state_mrbm = temp_total_frames } 
+		divide_temp_variable = { state_mrbm = temp_total_mrbm }
+		round_temp_variable = state_mrbm
+		set_variable = { mrbm_frame = state_mrbm }
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = { ROOT.total_srbm = 0 }
+			}
+			set_temp_variable = { temp_total_srbm = ROOT.total_srbm }
+			var:ROOT.silo_selected_state_id = { set_temp_variable = { state_srbm = THIS.stored_srbm } }
+		}
+		set_variable = { ROOT.state_srbm = state_srbm }
+		multiply_temp_variable = { state_srbm = temp_total_frames } 
+		divide_temp_variable = { state_srbm = temp_total_srbm }
+		round_temp_variable = state_srbm
+		set_variable = { srbm_frame = state_srbm }
+	}
+}

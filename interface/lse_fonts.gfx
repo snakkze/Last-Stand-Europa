@@ -30,8 +30,28 @@ bitmapfonts = {
     }
 
     bitmapfont = {
+        name = "lse_16bbc_reith_sans"
+        path = "gfx/fonts/bbc_reith/lse_16bbc_reith_sans"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+
+    bitmapfont = {
         name = "lse_20din_next"
         path = "gfx/fonts/din_next/lse_20din_next"
+        color = 0xffffffff
+
+        textcolors = {
+            G = { 86 172 91 }
+        }
+    }
+
+    bitmapfont = {
+        name = "lse_22bbc_reith_serif"
+        path = "gfx/fonts/bbc_reith/lse_22bbc_reith_serif"
         color = 0xffffffff
 
         textcolors = {

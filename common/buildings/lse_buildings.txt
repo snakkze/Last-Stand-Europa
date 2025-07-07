@@ -1,0 +1,17 @@
+buildings = {
+	rocket_silo = {
+		show_on_map = 1
+		base_cost = 6400
+		icon_frame = 28
+		value = 1
+		tags = {}
+		infrastructure_construction_effect = yes
+		disabled_in_dmz = yes
+		spawn_point = rocket_site_spawn
+		level_cap = {
+			state_max = 1
+			shares_slots = yes
+			exclusive_with = rocket_site
+		}
+	}
+}
